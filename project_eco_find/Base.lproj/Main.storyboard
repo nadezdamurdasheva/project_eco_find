@@ -149,7 +149,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxh-1W-bi4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2303" y="-694"/>
+            <point key="canvasLocation" x="2374" y="-694"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HvJ-2U-sig">
@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="2374" y="-1399"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="AVC-bu-KWP">
             <objects>
-                <viewController id="e7s-zu-g4w" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="e7s-zu-g4w" customClass="DetailViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2oI-Xk-2qf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,12 +243,12 @@
                                             <constraint firstAttribute="height" constant="226" id="zKt-wO-Sj5"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsg-zn-gjp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsg-zn-gjp">
                                         <rect key="frame" x="0.0" y="273" width="320" height="273"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="273" id="6Eu-nu-vFB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -282,10 +282,15 @@
                     <navigationItem key="navigationItem" id="LX4-c6-YQZ">
                         <barButtonItem key="leftBarButtonItem" title="Назад" style="plain" id="fWJ-xw-1Q3"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonSearchOnMap" destination="Vwg-Cw-tKr" id="y4c-Pr-fDl"/>
+                        <outlet property="imageDetail" destination="uYF-zd-ToJ" id="S4Q-jC-x37"/>
+                        <outlet property="labelDetail" destination="Lsg-zn-gjp" id="XWU-rl-Cdq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYM-zE-Dfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3490" y="-745"/>
+            <point key="canvasLocation" x="3268" y="-694"/>
         </scene>
         <!--About Programme View Controller-->
         <scene sceneID="Nab-ma-Qfc">
