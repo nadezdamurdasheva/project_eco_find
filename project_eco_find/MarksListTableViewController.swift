@@ -193,7 +193,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
         if section == 5{
             label.text = "Композиционные материалы"
         }
-        label.backgroundColor = .systemGray6
+        label.backgroundColor = UIColor(red:220.0/255.0, green:220.0/255.0, blue:220.0/255.0, alpha:1.0)
+        let boldAttribute = [
+           NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 17.0)!
+        ]
+        let boldText = NSAttributedString(string: label.text!, attributes: boldAttribute)
+        label.attributedText = boldText
+        //label.backgroundColor = .systemGray6
         return label
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -206,9 +212,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             if searching {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
+                cell.backgroundColor = UIColor(red:255.0/255.0, green:228.0/255.0, blue:181.0/255.0, alpha:1.0)
+                //cell.backgroundColor = .white
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
+            cell.backgroundColor = UIColor(red:255.0/255.0, green:228.0/255.0, blue:181.0/255.0, alpha:1.0)
+            //cell.backgroundColor = .white
             }
         }
         if indexPath.section == 1 {
@@ -218,9 +228,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             if searching {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
+                cell.backgroundColor = UIColor(red:143.0/255.0, green:188.0/255.0, blue:143.0/255.0, alpha:1.0)
+                //cell.backgroundColor = .systemGray5
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
+            cell.backgroundColor = UIColor(red:143.0/255.0, green:188.0/255.0, blue:143.0/255.0, alpha:1.0)
+            //cell.backgroundColor = .systemGray5
             }
         }
         if indexPath.section == 2 {
@@ -230,9 +244,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             if searching {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
+                cell.backgroundColor = UIColor(red:192.0/255.0, green:192.0/255.0, blue:192.0/255.0, alpha:1.0)
+                //cell.backgroundColor = .systemGray4
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
+            cell.backgroundColor = UIColor(red:192.0/255.0, green:192.0/255.0, blue:192.0/255.0, alpha:1.0)
+            //cell.backgroundColor = .systemGray4
             }
         }
         if indexPath.section == 3 {
@@ -242,9 +260,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             if searching {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
+                cell.backgroundColor = UIColor(red:255.0/255.0, green:160.0/255.0, blue:122.0/255.0, alpha:1.0)
+                //cell.backgroundColor = .systemGray3
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
+            cell.backgroundColor = UIColor(red:255.0/255.0, green:160.0/255.0, blue:122.0/255.0, alpha:1.0)
+            //cell.backgroundColor = .systemGray3
             }
         }
         if indexPath.section == 4 {
@@ -254,9 +276,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             if searching {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
+                cell.backgroundColor = UIColor(red:173.0/255.0, green:216.0/255.0, blue:230.0/255.0, alpha:1.0)
+                //cell.backgroundColor = .systemGray2
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
+            cell.backgroundColor = UIColor(red:173.0/255.0, green:216.0/255.0, blue:230.0/255.0, alpha:1.0)
+            //cell.backgroundColor = .systemGray2
             }
         }
         if indexPath.section == 5 {
@@ -266,9 +292,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             if searching {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
+                cell.backgroundColor = UIColor(red:221.0/255.0, green:160.0/255.0, blue:221.0/255.0, alpha:1.0)
+                //cell.backgroundColor = .systemGray
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
+            cell.backgroundColor = UIColor(red:221.0/255.0, green:160.0/255.0, blue:221.0/255.0, alpha:1.0)
+            //cell.backgroundColor = .systemGray
             }
         }
         /*let marksCell = allMarks[indexPath.row]
