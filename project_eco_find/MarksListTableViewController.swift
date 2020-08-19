@@ -120,73 +120,20 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
          
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        /*searchData = allMarks.filter({($0.name!.lowercased().prefix(searchText.count) == searchText.lowercased()) || ($0.name!.lowercased().suffix(searchText.count) == searchText.lowercased())})*/
-        searchData = allMarks.filter({$0.name!.lowercased().contains(searchText.lowercased())})
-           searching = true
-           tableView.reloadData()
+        searchData = allMarks.filter({($0.name!.lowercased().prefix(searchText.count) == searchText.lowercased()) || ($0.name!.lowercased().suffix(searchText.count) == searchText.lowercased()) || ($0.name!.lowercased().contains(searchText.lowercased()))})
+        /*searchData = allMarks.filter({$0.name!.lowercased().contains(searchText.lowercased())})*/
+        
+        searching = true
+        tableView.reloadData()}
        }
        
-       func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+       /*func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
            searching = false
            searchBarMarks.text = ""
            tableView.reloadData()
-       }
-    /*func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            searchData = allMarks.filter({ mark -> Bool in
-                searchBarMarks.selectedScopeButtonIndex {
-                if searchText.isEmpty { return true }
-                else{
-                    return mark.name.lowercased().contains(searchText.lowercased())
-                    }
-                }
-            })
-            tableView.reloadData()
-        }
-        
-        func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-            switch selectedScope {
-            case 0:
-                searchData = allMarks
-            case 1:
-                searchData = allMarks.filter({ animal -> Bool in
-                    animal.category == AnimalType.dog
-                })
-            case 2:
-                searchData = allMarks.filter({ animal -> Bool in
-                    animal.category == AnimalType.cat
-                })
-            default:
-                break
-            }
-            tableView.reloadData()
-        }
-    }*/
-    
-    
-    /*func searchBarCancelButtonClicked(_ searchBar: UISearchBar){
-        searchBar.text = ""
-        searchData = allMarks
-        searchBar.endEditing(true)
-        tableView.reloadData()
-       }
-
-       
-
-       func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
-        
-        searchData = searchText.isEmpty ? allMarks : allMarks.filter {
-            (item: String) -> Bool in
-
-                        // If dataItem matches the searchText, return true to include it
-            return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-
-        }
-        tableView.reloadData()
        }*/
     
-    
-    
-    
+ 
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -232,4 +179,4 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
     }
     */
 
-}
+
