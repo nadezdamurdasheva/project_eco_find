@@ -199,6 +199,7 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
         ]
         let boldText = NSAttributedString(string: label.text!, attributes: boldAttribute)
         label.attributedText = boldText
+        label.textAlignment = .center
         //label.backgroundColor = .systemGray6
         return label
     }
@@ -330,36 +331,76 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             vc?.image = allMarks[indexPath.row].pict!
             vc?.name = allMarks[indexPath.row].name! + allMarks[indexPath.row].desc!
         }*/
+        
+        
         var newArrayMarks = allMarks
-        if indexPath.section == 0 {
-            newArrayMarks = newArrayMarks.filter({$0.category! == "Пластмассы"})
-            vc?.image = newArrayMarks[indexPath.row].pict!
-            vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
-        }
-        if indexPath.section == 1 {
-            newArrayMarks = newArrayMarks.filter({$0.category! == "Бумага"})
-            vc?.image = newArrayMarks[indexPath.row].pict!
-             vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
-        }
-        if indexPath.section == 2 {
-            newArrayMarks = newArrayMarks.filter({$0.category! == "Металлы"})
-            vc?.image = newArrayMarks[indexPath.row].pict!
-             vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
-        }
-        if indexPath.section == 3 {
-            newArrayMarks = newArrayMarks.filter({$0.category! == "Органические материалы природного происхождения"})
-            vc?.image = newArrayMarks[indexPath.row].pict!
-             vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
-        }
-        if indexPath.section == 4 {
-            newArrayMarks = newArrayMarks.filter({$0.category! == "Стекло"})
-            vc?.image = newArrayMarks[indexPath.row].pict!
-             vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
-        }
-        if indexPath.section == 5 {
-            newArrayMarks = newArrayMarks.filter({$0.category! == "Композиционные материалы"})
-            vc?.image = newArrayMarks[indexPath.row].pict!
-             vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
+        var newArrayMarksSearch = searchData
+        /*let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MarksTableViewCell
+        vc!.imageDetail = cell.imageCell
+        vc!.labelDetail = cell.labelCell*/
+        
+        if searching {
+            if indexPath.section == 0 {
+               newArrayMarksSearch = newArrayMarksSearch.filter({$0.category! == "Пластмассы"})
+               vc?.image = newArrayMarksSearch[indexPath.row].pict!
+               vc?.name = newArrayMarksSearch[indexPath.row].name! + newArrayMarksSearch[indexPath.row].desc!
+            }
+            if indexPath.section == 1 {
+               newArrayMarksSearch = newArrayMarksSearch.filter({$0.category! == "Бумага"})
+               vc?.image = newArrayMarksSearch[indexPath.row].pict!
+                vc?.name = newArrayMarksSearch[indexPath.row].name! + newArrayMarksSearch[indexPath.row].desc!
+            }
+            if indexPath.section == 2 {
+               newArrayMarksSearch = newArrayMarksSearch.filter({$0.category! == "Металлы"})
+               vc?.image = newArrayMarksSearch[indexPath.row].pict!
+                vc?.name = newArrayMarksSearch[indexPath.row].name! + newArrayMarksSearch[indexPath.row].desc!
+            }
+            if indexPath.section == 3 {
+               newArrayMarksSearch = newArrayMarksSearch.filter({$0.category! == "Органические материалы природного происхождения"})
+               vc?.image = newArrayMarksSearch[indexPath.row].pict!
+                vc?.name = newArrayMarksSearch[indexPath.row].name! + newArrayMarksSearch[indexPath.row].desc!
+            }
+            if indexPath.section == 4 {
+               newArrayMarksSearch = newArrayMarksSearch.filter({$0.category! == "Стекло"})
+               vc?.image = newArrayMarksSearch[indexPath.row].pict!
+                vc?.name = newArrayMarksSearch[indexPath.row].name! + newArrayMarksSearch[indexPath.row].desc!
+            }
+            if indexPath.section == 5 {
+               newArrayMarksSearch = newArrayMarksSearch.filter({$0.category! == "Композиционные материалы"})
+               vc?.image = newArrayMarksSearch[indexPath.row].pict!
+                vc?.name = newArrayMarksSearch[indexPath.row].name! + newArrayMarksSearch[indexPath.row].desc!
+            }
+        } else {
+            if indexPath.section == 0 {
+                newArrayMarks = newArrayMarks.filter({$0.category! == "Пластмассы"})
+                vc?.image = newArrayMarks[indexPath.row].pict!
+                vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
+            }
+            if indexPath.section == 1 {
+                newArrayMarks = newArrayMarks.filter({$0.category! == "Бумага"})
+                vc?.image = newArrayMarks[indexPath.row].pict!
+                 vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
+            }
+            if indexPath.section == 2 {
+                newArrayMarks = newArrayMarks.filter({$0.category! == "Металлы"})
+                vc?.image = newArrayMarks[indexPath.row].pict!
+                 vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
+            }
+            if indexPath.section == 3 {
+                newArrayMarks = newArrayMarks.filter({$0.category! == "Органические материалы природного происхождения"})
+                vc?.image = newArrayMarks[indexPath.row].pict!
+                 vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
+            }
+            if indexPath.section == 4 {
+                newArrayMarks = newArrayMarks.filter({$0.category! == "Стекло"})
+                vc?.image = newArrayMarks[indexPath.row].pict!
+                 vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
+            }
+            if indexPath.section == 5 {
+                newArrayMarks = newArrayMarks.filter({$0.category! == "Композиционные материалы"})
+                vc?.image = newArrayMarks[indexPath.row].pict!
+                 vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
+            }
         }
        
         //vc?.image = allMarks[indexPath.section][indexPath.row].pict!
@@ -367,8 +408,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
         //vc?.image = allMarks[indexPath.row].pict!
         
         //vc?.name = allMarks[indexPath.section].name! + allMarks[indexPath.section].desc!
+        
+        
+        
+        
     }
 }
+
     
     
        /*func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
