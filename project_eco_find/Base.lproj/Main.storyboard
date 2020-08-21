@@ -79,7 +79,7 @@
         <!--Marks List Table View Controller-->
         <scene sceneID="R3p-I5-H2p">
             <objects>
-                <tableViewController id="zuJ-OT-xgv" customClass="MarksListTableViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MarksTableViewController" id="zuJ-OT-xgv" customClass="MarksListTableViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3al-dj-gRt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,12 +146,20 @@
                             <outlet property="delegate" destination="zuJ-OT-xgv" id="Glc-89-j5E"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ijw-ZS-VRQ"/>
+                    <navigationItem key="navigationItem" id="ijw-ZS-VRQ">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" style="plain" id="SQ5-f1-JTm">
+                            <connections>
+                                <segue destination="5oF-hZ-qJc" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="nVP-bo-daB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBarMarks" destination="uPn-en-r4L" id="Rs1-04-tuh"/>
+                        <segue destination="e7s-zu-g4w" kind="show" id="TGG-QF-qjH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxh-1W-bi4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5oF-hZ-qJc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2373.913043478261" y="-694.41964285714278"/>
         </scene>
@@ -239,7 +247,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="bZt-fm-qgD">
-                                <rect key="frame" x="47" y="91" width="320" height="724"/>
+                                <rect key="frame" x="47" y="135" width="320" height="680"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uYF-zd-ToJ">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
@@ -257,7 +265,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwg-Cw-tKr">
-                                        <rect key="frame" x="0.0" y="593" width="320" height="131"/>
+                                        <rect key="frame" x="0.0" y="593" width="320" height="87"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Посмотреть на карте"/>
                                     </button>
@@ -284,7 +292,11 @@
                         <viewLayoutGuide key="safeArea" id="uRh-aU-Bml"/>
                     </view>
                     <navigationItem key="navigationItem" id="LX4-c6-YQZ">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" style="plain" id="fWJ-xw-1Q3"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" style="plain" id="fWJ-xw-1Q3">
+                            <connections>
+                                <segue destination="6Vd-Yw-KJg" kind="unwind" unwindAction="unwindToMarksListTableViewControllerWithSegue:" id="gqG-Gh-Un0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="buttonSearchOnMap" destination="Vwg-Cw-tKr" id="y4c-Pr-fDl"/>
@@ -293,8 +305,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYM-zE-Dfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6Vd-Yw-KJg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3268" y="-694"/>
+            <point key="canvasLocation" x="3490" y="-694"/>
         </scene>
         <!--About Programme View Controller-->
         <scene sceneID="Nab-ma-Qfc">

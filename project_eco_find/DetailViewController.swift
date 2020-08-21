@@ -21,7 +21,15 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         labelDetail.text = name
         imageDetail.image = image
+        //navigationController?.navigationBar.backItem?.title = "Назад"
+        //navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: self, action: #selector(BackButtonTapped))
         // Do any additional setup after loading the view.
+    }
+    @objc func BackButtonTapped() {
+        //performSegue(withIdentifier: "unwindToMarksListTableViewController", sender: self)
+        
+        /*let vc = storyboard?.instantiateViewController(identifier: "MarksTableViewController") as? MarksListTableViewController
+        self.navigationController?.pushViewController(vc!, animated: true)*/
     }
     
     @IBAction func onClickSearchOnMap(_ sender: Any) {
