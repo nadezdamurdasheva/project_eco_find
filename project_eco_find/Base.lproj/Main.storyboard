@@ -147,7 +147,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ijw-ZS-VRQ">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" style="plain" id="SQ5-f1-JTm">
+                        <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="SQ5-f1-JTm">
                             <connections>
                                 <segue destination="5oF-hZ-qJc" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="nVP-bo-daB"/>
                             </connections>
@@ -418,7 +418,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7Z7-XM-z1c">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="uNz-Mi-udC"/>
-                        <barButtonItem key="rightBarButtonItem" title="Выйти" style="plain" id="ge3-LD-5UH">
+                        <barButtonItem key="rightBarButtonItem" title="В меню" style="plain" id="ge3-LD-5UH">
                             <connections>
                                 <segue destination="Esi-Yk-i9T" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="R1s-Dv-5V6"/>
                             </connections>
