@@ -19,6 +19,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var singleButton4: UIButton!
     
     
+    
     @IBOutlet weak var multipleStackView: UIStackView!
     @IBOutlet weak var multiLabel1: UILabel!
     @IBOutlet weak var multiLabel2: UILabel!
@@ -44,34 +45,124 @@ class QuestionViewController: UIViewController {
     
       
     @IBOutlet weak var questionProgressiveView: UIProgressView!
-    
+    //ecoHero = "🐶", almostEcoHero = "🐱", almostEcoEnemy = "🐰", ecoEnemy
     
       var questions: [Question] = [
-          Question(text: "Which food do you like the most?", type: .single,
+          Question(text: "Какой ваш основной способ передвижения?", type: .single,
           answer: [
-              Answer(text: "Steak", type: .dog),
-              Answer(text: "Fish", type: .cat),
-              Answer(text: "Carrots", type: .rabbit),
-              Answer(text: "Corn", type: .turtle)
+              Answer(text: "Общественный транспорт", type: .almostEcoEnemy),
+              Answer(text: "Велосипед", type: .ecoHero),
+              Answer(text: "Обычный автомобиль на бензине", type: .ecoEnemy),
+              Answer(text: "Электрокар или гибридный автомобиль", type: .almostEcoHero)
           ]),
           
-          Question(text: "Which activities do you enjoy?", type: .multiple,
+          Question(text: "Во что вы упаковываете продукты?", type: .multiple,
           answer: [
-              Answer(text: "Swimming", type: .turtle),
-              Answer(text: "Sleeping", type: .cat),
-              Answer(text: "Cuddling", type: .rabbit),
-              Answer(text: "Eating", type: .dog)
+              Answer(text: "В пластиковый пакет, который покупаю в магазине", type: .almostEcoEnemy),
+              Answer(text: "В бумажный пакет, который покупаю в магазине", type: .ecoEnemy),
+              Answer(text: "В тканевую сумку или рюкзак", type: .ecoHero),
+              Answer(text: "В пластиковый пакет, который беру из дома", type: .almostEcoHero)
           ]),
           
-          Question(text: "How much do you enjoy car rides?", type: .ranged, answer: [
-              Answer(text: "I dislike them", type: .cat),
-              Answer(text: "I get a little nervous", type: .rabbit),
-              Answer(text: "I barely notice them", type: .turtle),
-              Answer(text: "I love them", type: .dog)
+          Question(text: "Используете ли вы пакеты из магазина повторно?", type: .multiple,
+          answer: [
+              Answer(text: "Сразу же их выкидываю после использования", type: .ecoEnemy),
+              Answer(text: "Не покупаю пакеты в магазине", type: .ecoHero),
+              Answer(text: "Использую повторно", type: .almostEcoHero),
+              Answer(text: "Каждый раз покупаю новые", type: .almostEcoEnemy)
+          ]),
           
-          ])
+          Question(text: "Сортируете ли вы мусор?", type: .ranged, answer: [
+                       Answer(text: "Никогда не сортирую", type: .ecoEnemy),
+                       Answer(text: "Практически не сортирую", type: .almostEcoEnemy),
+                       Answer(text: "Иногда сортирую", type: .almostEcoHero),
+                       Answer(text: "Сортирую всегда", type: .ecoHero)
+          ]),
+          
+          Question(text: "Вы устраиваете вечеринку. Из чего будут есть ваши гости?", type: .single,
+          answer: [
+              Answer(text: "Из бумажных тарелок", type: .almostEcoEnemy),
+              Answer(text: "Из пластиковых тарелок, которые я сразу же выкину", type: .ecoEnemy),
+              Answer(text: "Из керамических тарелок", type: .ecoHero),
+              Answer(text: "Из пластиковых тарелок, которые я помою и использую повторно", type: .almostEcoHero)
+          ]),
+          
+          Question(text: "Оставляете ли вы мусор после отдыха на природе?", type: .ranged, answer: [
+              Answer(text: "Всегда оставляю", type: .ecoEnemy),
+              Answer(text: "Иногда оставляю", type: .almostEcoEnemy),
+              Answer(text: "Часто собираю с собой, но могу что-то оставить", type: .almostEcoHero),
+              Answer(text: "Всегда забираю", type: .ecoHero)
+          ]),
+          
+          Question(text: "Часто ли вы сдаете вторсырье? (макулатуру, пластик, аккумуляторы)", type: .ranged, answer: [
+              Answer(text: "Никогда", type: .ecoEnemy),
+              Answer(text: "Практически никогда", type: .almostEcoEnemy),
+              Answer(text: "Часто", type: .almostEcoHero),
+              Answer(text: "Всегда", type: .ecoHero)
+          ]),
+          
+          Question(text: "Что вы делаете с отработавшими батарейками?", type: .single,
+          answer: [
+              Answer(text: "Отношу их на пункт сбора опасных отходов", type: .almostEcoHero),
+              Answer(text: "Я не использую одноразовые батарейки", type: .ecoHero),
+              Answer(text: "Я собираю их, но не знаю, что с ними делать дальше", type: .almostEcoEnemy),
+              Answer(text: "Выбрасываю их в мусорку", type: .ecoEnemy)
+          ]),
+          
+          Question(text: "Что вы сделаете с ненужной одеждой?", type: .single,
+          answer: [
+              Answer(text: "Выброшу в мусорку", type: .ecoEnemy),
+              Answer(text: "Отдам нуждающимся", type: .almostEcoHero),
+              Answer(text: "Сдам на переработку", type: .ecoHero),
+              Answer(text: "Ничего не сделаю", type: .almostEcoEnemy)
+          ]),
+          
+          Question(text: "Сажали ли вы когда-нибудь дерево?", type: .single,
+          answer: [
+              Answer(text: "Да", type: .ecoHero),
+              Answer(text: "Много чего было посажено, но дерево пока нет", type: .almostEcoHero),
+              Answer(text: "Нет, не собираюсь сажать", type: .ecoEnemy),
+              Answer(text: "Нет, но собираюсь посадить", type: .almostEcoEnemy)
+          ]),
           
           
+          
+          Question(text: "Какие лампочки горят у вас дома?", type: .multiple,
+          answer: [
+              Answer(text: "Лампы накаливания", type: .almostEcoEnemy),
+              Answer(text: "Галогенные", type: .ecoEnemy),
+              Answer(text: "Люминесцентные", type: .almostEcoHero),
+              Answer(text: "Светодиодные", type: .ecoHero)
+          ]),
+          
+          Question(text: "Вы выключаете свет, когда выходите из комнаты?", type: .ranged, answer: [
+                Answer(text: "Не выключаю", type: .ecoEnemy),
+                Answer(text: "Выключаю редко", type: .almostEcoEnemy),
+                Answer(text: "Часто выключаю", type: .almostEcoHero),
+                Answer(text: "Всегда выключаю", type: .ecoHero)
+          ]),
+          Question(text: "Пьёте ли вы воду из пластиковых бутылок?", type: .multiple,
+          answer: [
+              Answer(text: "Когда у меня нет другого выбора", type: .almostEcoHero),
+              Answer(text: "Часто пью", type: .ecoEnemy),
+              Answer(text: "Нет, я ношу с собой многоразовую ёмкость для воды", type: .ecoHero),
+              Answer(text: "Пью время от времени", type: .almostEcoEnemy)
+          ]),
+          
+          Question(text: "Как часто вы пьёте что-либо из одноразовых стаканчиков?)", type: .ranged, answer: [
+              Answer(text: "Каждый день", type: .ecoEnemy),
+              Answer(text: "4-5 раз в неделю", type: .almostEcoEnemy),
+              Answer(text: "Пару раз в неделю", type: .almostEcoHero),
+              Answer(text: "Никогда", type: .ecoHero)
+          ]),
+          
+          Question(text: "В руках у вас мусор, но рядом не оказалось мусорки. Вы...", type: .multiple,
+          answer: [
+              Answer(text: "Выкинете мусор прямо на дорогу", type: .ecoEnemy),
+              Answer(text: "Будете искать мусорку, пока не найдете", type: .almostEcoHero),
+              Answer(text: "Положите мусор в карман и забудете о нём", type: .almostEcoEnemy),
+              Answer(text: "Остортируете мусор, а затем его выкинете", type: .ecoHero)
+          ]),
       ]
     
     var questionIndex = 0
@@ -104,7 +195,7 @@ class QuestionViewController: UIViewController {
         let totalProgress = Float(questionIndex) / Float(questions.count)
         
         
-        navigationItem.title = "Question #\(questionIndex + 1)"
+        navigationItem.title = "Вопрос № \(questionIndex + 1)"
         questionLabel.text = currentQuestion.text
         questionProgressiveView.setProgress(totalProgress, animated: true)
         
@@ -126,6 +217,11 @@ class QuestionViewController: UIViewController {
         singleButton2.setTitle(answers[1].text, for: .normal)
         singleButton3.setTitle(answers[2].text, for: .normal)
         singleButton4.setTitle(answers[3].text, for: .normal)
+        //myButton.titleLabel?.textAlignment = .center
+        singleButton1.titleLabel?.textAlignment = .center
+        singleButton2.titleLabel?.textAlignment = .center
+        singleButton3.titleLabel?.textAlignment = .center
+        singleButton4.titleLabel?.textAlignment = .center
     }
     
     func updateMultipleStack(using answers: [Answer]) {
