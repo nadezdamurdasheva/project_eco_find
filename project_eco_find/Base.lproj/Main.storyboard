@@ -35,6 +35,9 @@
                                         <rect key="frame" x="0.0" y="152" width="374" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Карта сортировочных станций"/>
+                                        <connections>
+                                            <segue destination="Hs7-u0-DGR" kind="show" id="ppm-sL-L4d"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wh-wy-KCn">
                                         <rect key="frame" x="0.0" y="228" width="374" height="36"/>
@@ -78,6 +81,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="69.642857142857139"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="LXM-G5-Msi">
+            <objects>
+                <viewController id="Hs7-u0-DGR" customClass="MapViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYC-eC-AvN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gEh-jw-fm4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ljE-jX-aKt">
+                                <rect key="frame" x="9.5" y="108" width="395" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                    <segment title=""/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeMapType:" destination="Hs7-u0-DGR" eventType="valueChanged" id="guM-37-ZxH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3uy-zs-VGE" firstAttribute="bottom" secondItem="gEh-jw-fm4" secondAttribute="bottom" id="1tJ-yb-DgT"/>
+                            <constraint firstItem="ljE-jX-aKt" firstAttribute="centerX" secondItem="hYC-eC-AvN" secondAttribute="centerX" id="4aa-Vs-0GQ"/>
+                            <constraint firstItem="gEh-jw-fm4" firstAttribute="top" secondItem="3uy-zs-VGE" secondAttribute="top" id="F7k-Pc-4Au"/>
+                            <constraint firstItem="ljE-jX-aKt" firstAttribute="top" secondItem="3uy-zs-VGE" secondAttribute="top" constant="20" id="N3h-Tt-wEp"/>
+                            <constraint firstItem="gEh-jw-fm4" firstAttribute="leading" secondItem="3uy-zs-VGE" secondAttribute="leading" id="h7v-Uy-0vi"/>
+                            <constraint firstItem="3uy-zs-VGE" firstAttribute="trailing" secondItem="gEh-jw-fm4" secondAttribute="trailing" id="rbH-fM-pGl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3uy-zs-VGE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5ON-NA-d9H">
+                        <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="RkS-UC-Pev">
+                            <connections>
+                                <segue destination="6LO-QW-Asj" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="1OG-js-JaV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Назад" style="plain" id="b7O-iu-5u8">
+                            <connections>
+                                <segue destination="6LO-QW-Asj" kind="unwind" unwindAction="unwindToDetailViewControllerWithSegue:" id="4ZK-Ro-SCP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="gEh-jw-fm4" id="dhw-53-qxF"/>
+                        <outlet property="segmentedView" destination="ljE-jX-aKt" id="VIx-NL-JfW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBI-dz-WrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6LO-QW-Asj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3107" y="76"/>
         </scene>
         <!--Категории упаковок-->
         <scene sceneID="R3p-I5-H2p">
@@ -196,6 +258,9 @@
                                         <rect key="frame" x="0.0" y="593" width="320" height="87"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Посмотреть на карте"/>
+                                        <connections>
+                                            <segue destination="Hs7-u0-DGR" kind="show" id="0TZ-Cs-5hC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -544,7 +609,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9p-1v-Wcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="bsV-8X-OUC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3083" y="460"/>
+            <point key="canvasLocation" x="3090" y="798"/>
         </scene>
         <!--Результат-->
         <scene sceneID="8k3-S4-nJk">
@@ -596,7 +661,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw2-se-cuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="eTk-BN-dEF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3996" y="459"/>
+            <point key="canvasLocation" x="4229" y="865"/>
         </scene>
         <!--Обучение-->
         <scene sceneID="lsV-We-4OB">
@@ -686,4 +751,7 @@
             <point key="canvasLocation" x="1047.8260869565217" y="69.642857142857139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0TZ-Cs-5hC"/>
+    </inferredMetricsTieBreakers>
 </document>
