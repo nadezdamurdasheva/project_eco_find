@@ -18,13 +18,19 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.requestWhenInUseAuthorization()
+        /*locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.startUpdatingLocation()
-        mapView.showsUserLocation = true
+        mapView.showsUserLocation = true*/
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view.
     }
+    
+    
     
     @IBAction func changeMapType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
@@ -45,4 +51,12 @@ class MapViewController: UIViewController {
     }
     */
 
+}
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: locations[0].coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+        mapView.showsUserLocation = true
+    }
 }
