@@ -12,6 +12,7 @@
 		0D2B6A3324EC21DD0005B3D5 /* MarksListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B6A3224EC21DD0005B3D5 /* MarksListTableViewController.swift */; };
 		0D2B6A3924EC5AF60005B3D5 /* MarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B6A3824EC5AF60005B3D5 /* MarksTableViewCell.swift */; };
 		0D2B6A3B24EDA25D0005B3D5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B6A3A24EDA25D0005B3D5 /* DetailViewController.swift */; };
+		0D2EE6B825695A1300E8564A /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2EE6B725695A1300E8564A /* Artwork.swift */; };
 		0D3FC81F24F04896005B1811 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FC81E24F04896005B1811 /* QuestionViewController.swift */; };
 		0D3FC82124F123B5005B1811 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FC82024F123B5005B1811 /* Question.swift */; };
 		0D3FC82324F123EA005B1811 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FC82224F123EA005B1811 /* ResultsViewController.swift */; };
@@ -34,6 +35,8 @@
 		0D2B6A3224EC21DD0005B3D5 /* MarksListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarksListTableViewController.swift; sourceTree = "<group>"; };
 		0D2B6A3824EC5AF60005B3D5 /* MarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarksTableViewCell.swift; sourceTree = "<group>"; };
 		0D2B6A3A24EDA25D0005B3D5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0D2EE6B625691FAD00E8564A /* PublicArt.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = PublicArt.geojson; sourceTree = "<group>"; };
+		0D2EE6B725695A1300E8564A /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		0D3FC81E24F04896005B1811 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		0D3FC82024F123B5005B1811 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0D3FC82224F123EA005B1811 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				0D718D3A24EA6BD300B134E4 /* MenuViewController.swift */,
 				0D718D4F24EA8E0200B134E4 /* LearningViewController.swift */,
 				0D718D3C24EA6BD300B134E4 /* Main.storyboard */,
+				0D2EE6B625691FAD00E8564A /* PublicArt.geojson */,
+				0D2EE6B725695A1300E8564A /* Artwork.swift */,
 				0D81B96B24F17AE1006EE92F /* MapViewController.swift */,
 				0D3FC82224F123EA005B1811 /* ResultsViewController.swift */,
 				0D3FC82024F123B5005B1811 /* Question.swift */,
@@ -189,6 +194,7 @@
 				0D2B6A3B24EDA25D0005B3D5 /* DetailViewController.swift in Sources */,
 				0D2B6A3324EC21DD0005B3D5 /* MarksListTableViewController.swift in Sources */,
 				0D3FC82124F123B5005B1811 /* Question.swift in Sources */,
+				0D2EE6B825695A1300E8564A /* Artwork.swift in Sources */,
 				0D3FC82324F123EA005B1811 /* ResultsViewController.swift in Sources */,
 				0D718D3924EA6BD300B134E4 /* SceneDelegate.swift in Sources */,
 				0D3FC81F24F04896005B1811 /* QuestionViewController.swift in Sources */,

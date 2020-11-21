@@ -28,6 +28,14 @@ class MapViewController: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         // Do any additional setup after loading the view.
+        
+        //show point on a map
+        let artwork = Artwork(
+          title: "Пункт приема пластика",
+          locationName: "Аллея Витте, 8",
+          discipline: "Sculpture",
+          coordinate: CLLocationCoordinate2D(latitude: 55.547261, longitude: 37.539836))
+        mapView.addAnnotation(artwork)
     }
     
     
@@ -54,6 +62,9 @@ class MapViewController: UIViewController {
 }
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        manager.stopUpdatingLocation() //stop updating locations
+        manager.delegate = nil
+        
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: locations[0].coordinate, span: span)
         mapView.setRegion(region, animated: true)
