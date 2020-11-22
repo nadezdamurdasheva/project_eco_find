@@ -66,4 +66,23 @@ class Artwork: NSObject, MKAnnotation {
       mapItem.name = title
       return mapItem
     }
+    
+    var markerTintColor: UIColor  {
+      switch discipline {
+      case "Пластик":
+        return .yellow
+      case "Бумага":
+        return .white
+      case "Металл":
+        return .gray
+      case "Органика":
+        return .red
+      case "Стекло":
+        return .blue
+      case "Композитный":
+        return .brown
+      default:
+        return .green
+    }
+    }
 }

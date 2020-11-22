@@ -14,6 +14,7 @@
 		0D2B6A3B24EDA25D0005B3D5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2B6A3A24EDA25D0005B3D5 /* DetailViewController.swift */; };
 		0D2EE6B825695A1300E8564A /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2EE6B725695A1300E8564A /* Artwork.swift */; };
 		0D2EE6BF2569C59100E8564A /* PublicArt.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 0D2EE6BE2569C59100E8564A /* PublicArt.geojson */; };
+		0D2EE6C1256A851A00E8564A /* ArtworkViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2EE6C0256A851A00E8564A /* ArtworkViews.swift */; };
 		0D3FC81F24F04896005B1811 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FC81E24F04896005B1811 /* QuestionViewController.swift */; };
 		0D3FC82124F123B5005B1811 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FC82024F123B5005B1811 /* Question.swift */; };
 		0D3FC82324F123EA005B1811 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FC82224F123EA005B1811 /* ResultsViewController.swift */; };
@@ -38,6 +39,7 @@
 		0D2B6A3A24EDA25D0005B3D5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0D2EE6B725695A1300E8564A /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		0D2EE6BE2569C59100E8564A /* PublicArt.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PublicArt.geojson; path = "../../../Downloads/MapKit_HonoluluArt 3/final/HonoluluArt/PublicArt.geojson"; sourceTree = "<group>"; };
+		0D2EE6C0256A851A00E8564A /* ArtworkViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViews.swift; sourceTree = "<group>"; };
 		0D3FC81E24F04896005B1811 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		0D3FC82024F123B5005B1811 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0D3FC82224F123EA005B1811 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				0D718D3C24EA6BD300B134E4 /* Main.storyboard */,
 				0D2EE6BE2569C59100E8564A /* PublicArt.geojson */,
 				0D2EE6B725695A1300E8564A /* Artwork.swift */,
+				0D2EE6C0256A851A00E8564A /* ArtworkViews.swift */,
 				0D81B96B24F17AE1006EE92F /* MapViewController.swift */,
 				0D3FC82224F123EA005B1811 /* ResultsViewController.swift */,
 				0D3FC82024F123B5005B1811 /* Question.swift */,
@@ -191,6 +194,7 @@
 				0D718D5024EA8E0200B134E4 /* LearningViewController.swift in Sources */,
 				0D1F2B5724EAAC2700CF5A62 /* Slide.swift in Sources */,
 				0D718D4124EA6BD300B134E4 /* project_eco_find.xcdatamodeld in Sources */,
+				0D2EE6C1256A851A00E8564A /* ArtworkViews.swift in Sources */,
 				0DB048E924EBCE7D0035A1A2 /* AboutProgrammeViewController.swift in Sources */,
 				0D2B6A3924EC5AF60005B3D5 /* MarksTableViewCell.swift in Sources */,
 				0D2B6A3B24EDA25D0005B3D5 /* DetailViewController.swift in Sources */,
