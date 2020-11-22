@@ -11,8 +11,9 @@ import MapKit
 import CoreLocation
 
 class MapViewController: UIViewController {
-
-    @IBOutlet weak var segmentedView: UISegmentedControl!
+    
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     private var artworks: [Artwork] = []
     let locationManager = CLLocationManager()
@@ -20,6 +21,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         /*locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
