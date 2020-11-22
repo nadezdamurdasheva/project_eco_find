@@ -105,7 +105,7 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {
-    /*
+    
   // 1
   func mapView(
     _ mapView: MKMapView,
@@ -133,7 +133,7 @@ extension MapViewController: MKMapViewDelegate {
       view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
     }
     return view
-  }*/
+  }
     
     func mapView(
       _ mapView: MKMapView,
