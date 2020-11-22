@@ -1,0 +1,53 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+      "type": "Feature",
+      "properties": {
+        "location": "Lester McCoy Pavilion",
+        "latitude": "55.547261",
+        "description": "One of a pair of murals at the Lester McCoy Pavilion at Ala Mona Regional Park. A Works Progress Administration art project, done in the Art Deco style. It depicts various aspects of makahiki (harvest festival), imagined as taking place in the vicinity of what is now know as Ala Mona Park, makahiki pa'ani ho'oikaika (annual sports tournaments) are emphasized. This mural shows ali'i (chiefs) guided by the spirit of Lono (one of the four major Hawaiian gods, associated with peace and fertility) being presented with ho'okupu (tribute). In the distance kahuna (priests) guard the kapa (bark cloth) double banner of Lono. In the background are the silhouette of Lae'ahi (Diamond Head) and the village of Waikiki (spouting water). Sports represented are he'e holua (sled racing), mokomoko (hand-to-hand fighting), and 'ulu maika (bowling), dance and music are represented with 'uli'uli (gourd rattle), pahu (drum), and mahiole (helmet).",
+        "thumb": null,
+        "credit": "Funded by the Works Progress Administration",
+        "objectid": "1930.01.01",
+        "creator": "Robert Lee Eskridge",
+        "longitude": "37.539836",
+        "imagefile": "http://hiculturearts.pastperfect-online.com/34250images/001/19300101.JPG",
+        "date": "1935",
+        "discipline": "Mural",
+        "title": "The Makahiki Festival - The Makai Mural",
+        "access": "Limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.539836,
+            55.547261
+        ]
+      }
+    },
+        {
+      "type": "Feature",
+      "properties": {
+        "location": "Kuhio Beach",
+        "latitude": "55.546677",
+        "description": "Bronze figure of Prince Jonah Kuhio Kalanianaole. Located at Kuhio Beach.",
+        "thumb": null,
+        "credit": "City and County of Honolulu Purchase",
+        "objectid": "2001.05",
+        "creator": "Sean Browne",
+        "longitude": "37.519833",
+        "imagefile": "http://hiculturearts.pastperfect-online.com/34250images/003/002_200105.JPG",
+        "date": "2001",
+        "discipline": "Sculpture",
+        "title": "Prince Jonah Kuhio Kalanianaole",
+        "access": "Full"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.519833,55.546677
+        ]
+      }
+    }
+]
+}

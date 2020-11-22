@@ -14,7 +14,9 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var segmentedView: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
+    private var artworks: [Artwork] = []
     let locationManager = CLLocationManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,23 +33,52 @@ class MapViewController: UIViewController {
         
         //show point on a map
         mapView.delegate = self
-        let artwork = Artwork(
+        
+        /*let artwork = Artwork(
           title: "Пункт приема пластика",
           locationName: "Аллея Витте, 8",
           discipline: "Sculpture",
           coordinate: CLLocationCoordinate2D(latitude: 55.547261, longitude: 37.539836))
-        mapView.addAnnotation(artwork)
+        mapView.addAnnotation(artwork)*/
+        
+        loadInitialData()
+        mapView.addAnnotations(artworks)
     }
     
     
     
-    @IBAction func changeMapType(_ sender: UISegmentedControl) {
+    
+    /*@IBAction func changeMapType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
             
         }
         if sender.selectedSegmentIndex == 1{
             
         }
+    }*/
+    
+    private func loadInitialData() {
+      // 1
+      guard
+        let fileName = Bundle.main.url(forResource: "PublicArt", withExtension: "geojson"),
+        let artworkData = try? Data(contentsOf: fileName)
+        else {
+          return
+      }
+
+      do {
+        // 2
+        let features = try MKGeoJSONDecoder()
+          .decode(artworkData)
+          .compactMap { $0 as? MKGeoJSONFeature }
+        // 3
+        let validWorks = features.compactMap(Artwork.init)
+        // 4
+        artworks.append(contentsOf: validWorks)
+      } catch {
+        // 5
+        print("Unexpected error: \(error).")
+      }
     }
     
     /*
@@ -74,7 +105,7 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {
-    
+    /*
   // 1
   func mapView(
     _ mapView: MKMapView,
@@ -102,7 +133,7 @@ extension MapViewController: MKMapViewDelegate {
       view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
     }
     return view
-  }
+  }*/
     
     func mapView(
       _ mapView: MKMapView,
@@ -118,5 +149,4 @@ extension MapViewController: MKMapViewDelegate {
       ]
       artwork.mapItem?.openInMaps(launchOptions: launchOptions)
     }
-    
 }
