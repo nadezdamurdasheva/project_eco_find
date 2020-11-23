@@ -97,10 +97,13 @@
                                 </constraints>
                             </mapView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orP-vS-kDr">
-                                <rect key="frame" x="0.0" y="88" width="930" height="48"/>
+                                <rect key="frame" x="0.0" y="88" width="930" height="89"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ljE-jX-aKt">
-                                        <rect key="frame" x="0.0" y="8" width="930" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="930" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="YID-E6-TvW"/>
+                                        </constraints>
                                         <segments>
                                             <segment title="Все"/>
                                             <segment title="Пластик"/>
@@ -116,13 +119,13 @@
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="jrx-4f-RSA" firstAttribute="bottom" secondItem="ljE-jX-aKt" secondAttribute="bottom" id="0f8-xj-4Gw"/>
-                                    <constraint firstItem="ljE-jX-aKt" firstAttribute="trailing" secondItem="80S-DM-qgv" secondAttribute="trailing" id="1Ae-hJ-KCt"/>
-                                    <constraint firstAttribute="bottom" secondItem="ljE-jX-aKt" secondAttribute="bottom" id="3IC-4a-1tb"/>
-                                    <constraint firstAttribute="height" constant="48" id="Edb-Kh-zlz"/>
-                                    <constraint firstItem="ljE-jX-aKt" firstAttribute="top" secondItem="jrx-4f-RSA" secondAttribute="top" constant="7" id="Ft2-8B-jav"/>
-                                    <constraint firstAttribute="width" constant="930" id="oK3-DK-axD"/>
-                                    <constraint firstItem="ljE-jX-aKt" firstAttribute="centerX" secondItem="orP-vS-kDr" secondAttribute="centerX" id="q2z-tY-v8J"/>
+                                    <constraint firstItem="ljE-jX-aKt" firstAttribute="bottom" secondItem="jrx-4f-RSA" secondAttribute="bottom" id="3xG-Yj-zDE"/>
+                                    <constraint firstAttribute="bottom" secondItem="ljE-jX-aKt" secondAttribute="bottom" id="4Xp-yU-p8i"/>
+                                    <constraint firstAttribute="height" constant="89" id="54X-et-xSY"/>
+                                    <constraint firstItem="ljE-jX-aKt" firstAttribute="top" secondItem="jrx-4f-RSA" secondAttribute="top" id="Bix-0f-qfh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ljE-jX-aKt" secondAttribute="trailing" id="MNJ-ya-7BH"/>
+                                    <constraint firstItem="ljE-jX-aKt" firstAttribute="leading" secondItem="jrx-4f-RSA" secondAttribute="leading" id="lqC-Bs-Obh"/>
+                                    <constraint firstItem="ljE-jX-aKt" firstAttribute="trailing" secondItem="jrx-4f-RSA" secondAttribute="trailing" id="uR0-GF-kU8"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="80S-DM-qgv"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="jrx-4f-RSA"/>
@@ -132,12 +135,11 @@
                         <constraints>
                             <constraint firstItem="3uy-zs-VGE" firstAttribute="bottom" secondItem="gEh-jw-fm4" secondAttribute="bottom" id="1tJ-yb-DgT"/>
                             <constraint firstItem="gEh-jw-fm4" firstAttribute="top" secondItem="3uy-zs-VGE" secondAttribute="top" id="F7k-Pc-4Au"/>
-                            <constraint firstItem="3uy-zs-VGE" firstAttribute="bottom" secondItem="orP-vS-kDr" secondAttribute="bottom" constant="726" id="UPA-N1-fbf"/>
-                            <constraint firstItem="orP-vS-kDr" firstAttribute="top" secondItem="gEh-jw-fm4" secondAttribute="top" id="Vj5-Mk-25h"/>
-                            <constraint firstItem="orP-vS-kDr" firstAttribute="leading" secondItem="gEh-jw-fm4" secondAttribute="leading" id="awK-LV-IVo"/>
+                            <constraint firstItem="orP-vS-kDr" firstAttribute="top" secondItem="gEh-jw-fm4" secondAttribute="top" id="IKH-XW-0ED"/>
                             <constraint firstItem="gEh-jw-fm4" firstAttribute="leading" secondItem="3uy-zs-VGE" secondAttribute="leading" id="h7v-Uy-0vi"/>
-                            <constraint firstItem="orP-vS-kDr" firstAttribute="trailing" secondItem="gEh-jw-fm4" secondAttribute="trailing" id="hCL-pU-IBK"/>
+                            <constraint firstItem="3uy-zs-VGE" firstAttribute="bottom" secondItem="orP-vS-kDr" secondAttribute="bottom" constant="685" id="puI-oo-5d3"/>
                             <constraint firstItem="3uy-zs-VGE" firstAttribute="trailing" secondItem="gEh-jw-fm4" secondAttribute="trailing" id="rbH-fM-pGl"/>
+                            <constraint firstItem="orP-vS-kDr" firstAttribute="leading" secondItem="gEh-jw-fm4" secondAttribute="leading" id="uJW-Z4-DVI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3uy-zs-VGE"/>
                     </view>
