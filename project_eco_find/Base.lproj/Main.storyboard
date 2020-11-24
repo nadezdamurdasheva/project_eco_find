@@ -107,6 +107,9 @@
                                     <segment title="Стекло"/>
                                     <segment title="Композиционный"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeSegment:" destination="Hs7-u0-DGR" eventType="valueChanged" id="Irs-Jp-rve"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -135,6 +138,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="gEh-jw-fm4" id="dhw-53-qxF"/>
+                        <outlet property="segmentControl" destination="UiY-zs-4p0" id="2CA-UF-WnH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBI-dz-WrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

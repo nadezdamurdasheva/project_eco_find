@@ -11,6 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController {
     
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     @IBOutlet weak var mapView: MKMapView!
     private var artworks: [Artwork] = []
@@ -49,6 +50,61 @@ class MapViewController: UIViewController {
         mapView.addAnnotations(artworks)
     }
 
+    @IBAction func changeSegment(_ sender: UISegmentedControl) {
+        let annotations = mapView.annotations
+        switch sender.selectedSegmentIndex {
+        case 1:
+            let filteredAnnotations = mapView.annotations.filter { annotation in
+                if annotation is MKUserLocation { return false }          // don't remove MKUserLocation
+                guard let title = annotation.title else { return false }  // don't remove annotations without any title
+                return title != "Пункт приема пластика"                              // remove those whose title does not match search string
+            }
+            mapView.removeAnnotations(filteredAnnotations)
+        case 2:
+            let filteredAnnotations = mapView.annotations.filter { annotation in
+                if annotation is MKUserLocation { return false }          // don't remove MKUserLocation
+                guard let title = annotation.title else { return false }  // don't remove annotations without any title
+                return title != "Пункт приема бумаги"                              // remove those whose title does not match search string
+            }
+            mapView.removeAnnotations(filteredAnnotations)
+        case 3:
+            let filteredAnnotations = mapView.annotations.filter { annotation in
+                if annotation is MKUserLocation { return false }          // don't remove MKUserLocation
+                guard let title = annotation.title else { return false }  // don't remove annotations without any title
+                return title != "Пункт приема металла"                              // remove those whose title does not match search string
+            }
+            mapView.removeAnnotations(filteredAnnotations)
+        case 4:
+            let filteredAnnotations = mapView.annotations.filter { annotation in
+                if annotation is MKUserLocation { return false }          // don't remove MKUserLocation
+                guard let title = annotation.title else { return false }  // don't remove annotations without any title
+                return title != "Пункт приема органических материалов"                              // remove those whose title does not match search string
+            }
+            mapView.removeAnnotations(filteredAnnotations)
+        case 5:
+            let filteredAnnotations = mapView.annotations.filter { annotation in
+                if annotation is MKUserLocation { return false }          // don't remove MKUserLocation
+                guard let title = annotation.title else { return false }  // don't remove annotations without any title
+                return title != "Пункт приема стекла"                              // remove those whose title does not match search string
+            }
+            mapView.removeAnnotations(filteredAnnotations)
+        case 6:
+            let filteredAnnotations = mapView.annotations.filter { annotation in
+                if annotation is MKUserLocation { return false }          // don't remove MKUserLocation
+                guard let title = annotation.title else { return false }  // don't remove annotations without any title
+                return title != "Пункт приема композиционных материалов"                              // remove those whose title does not match search string
+            }
+            mapView.removeAnnotations(filteredAnnotations)
+        default:
+            mapView.addAnnotations(artworks)
+        }
+        /*if sender.selectedSegmentIndex == 0{
+            if artworks.discipline ==
+        }
+        if sender.selectedSegmentIndex == 1{
+            
+        }*/
+    }
     /*@IBAction func changeMapType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
             
@@ -75,6 +131,9 @@ class MapViewController: UIViewController {
         // 3
         let validWorks = features.compactMap(Artwork.init)
         // 4
+        /*if (segmentControl.selectedSegmentIndex == 0) {
+        
+        }*/
         artworks.append(contentsOf: validWorks)
       } catch {
         // 5
