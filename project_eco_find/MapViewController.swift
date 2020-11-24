@@ -9,11 +9,9 @@
 import UIKit
 import MapKit
 import CoreLocation
-import ScrollableSegmentedControl
 
 class MapViewController: UIViewController {
     
-    @IBOutlet weak var mySegmentedControl: ScrollableSegmentedControl!
     
     @IBOutlet weak var mapView: MKMapView!
     private var artworks: [Artwork] = []
@@ -22,17 +20,6 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //mySegmentedControl.segmentStyle = .textOnly
-        mySegmentedControl.insertSegment(withTitle: "All", at: 0)
-        mySegmentedControl.insertSegment(withTitle: "Plastic", at: 1)
-        
-        mySegmentedControl.underlineSelected = true
-        
-        mySegmentedControl.segmentContentColor = UIColor.white
-        mySegmentedControl.selectedSegmentContentColor = UIColor.yellow
-        mySegmentedControl.backgroundColor = UIColor.black
-        mySegmentedControl.fixedSegmentWidth = false
-        mySegmentedControl.addTarget(self, action: #selector(MapViewController.segmentSelected(sender:)), for: .valueChanged)
         /*locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
@@ -62,23 +49,7 @@ class MapViewController: UIViewController {
         loadInitialData()
         mapView.addAnnotations(artworks)
     }
-    
-    @objc func segmentSelected(sender:ScrollableSegmentedControl) {
-        print("Segment at index \(sender.selectedSegmentIndex)  selected")
-    }
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let segmentedControlAppearance = ScrollableSegmentedControl.appearance()
-        segmentedControlAppearance.segmentContentColor = UIColor.white
-        segmentedControlAppearance.selectedSegmentContentColor = UIColor.yellow
-        segmentedControlAppearance.backgroundColor = UIColor.black
 
-        return true
-    }
-    
-    
-    
-    
     /*@IBAction func changeMapType(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
             
