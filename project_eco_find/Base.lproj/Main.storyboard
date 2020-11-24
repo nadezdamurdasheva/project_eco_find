@@ -50,7 +50,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rL-id-zU2">
                                         <rect key="frame" x="0.0" y="304" width="374" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Обучение"/>
+                                        <state key="normal" title="Справка"/>
                                         <connections>
                                             <segue destination="ye5-LV-PBd" kind="show" id="y9s-1H-L9j"/>
                                         </connections>
@@ -95,6 +95,7 @@
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UiY-zs-4p0">
                                 <rect key="frame" x="0.0" y="88" width="414" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="RZo-vK-Dqu"/>
                                 </constraints>
@@ -107,6 +108,7 @@
                                     <segment title="Стекло"/>
                                     <segment title="Композиционный"/>
                                 </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="changeSegment:" destination="Hs7-u0-DGR" eventType="valueChanged" id="Irs-Jp-rve"/>
                                 </connections>
@@ -420,8 +422,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Ree-xF-BEN">
-                                <rect key="frame" x="20" y="224" width="374" height="448"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ree-xF-BEN">
+                                <rect key="frame" x="20" y="264" width="374" height="368"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hG9-VA-9sh">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="62"/>
@@ -444,7 +446,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X17-XH-6Tq">
-                                        <rect key="frame" x="0.0" y="102" width="374" height="62"/>
+                                        <rect key="frame" x="0.0" y="82" width="374" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-pW-Kmi">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="62"/>
@@ -464,7 +466,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u3r-gg-W26">
-                                        <rect key="frame" x="0.0" y="204" width="374" height="62"/>
+                                        <rect key="frame" x="0.0" y="164" width="374" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmJ-Zm-63Y">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="62"/>
@@ -484,7 +486,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2sg-qB-hma">
-                                        <rect key="frame" x="0.0" y="306" width="374" height="62"/>
+                                        <rect key="frame" x="0.0" y="246" width="374" height="62"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2Q-0N-O4f">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="62"/>
@@ -504,7 +506,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-ll-Odx">
-                                        <rect key="frame" x="0.0" y="408" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="328" width="374" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="Подтвердить"/>
                                         <connections>
@@ -668,7 +670,7 @@
             </objects>
             <point key="canvasLocation" x="4229" y="865"/>
         </scene>
-        <!--Обучение-->
+        <!--Справка-->
         <scene sceneID="lsV-We-4OB">
             <objects>
                 <viewController id="ye5-LV-PBd" customClass="LearningViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
@@ -717,7 +719,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4hu-dY-pef"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Обучение" id="7Z7-XM-z1c">
+                    <navigationItem key="navigationItem" title="Справка" id="7Z7-XM-z1c">
                         <leftBarButtonItems>
                             <barButtonItem style="plain" id="uNz-Mi-udC"/>
                             <barButtonItem title="В меню" style="plain" id="7xL-Eg-5SK">

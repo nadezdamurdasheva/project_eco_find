@@ -70,17 +70,17 @@ class Artwork: NSObject, MKAnnotation {
     var markerTintColor: UIColor  {
       switch discipline {
       case "Пластик":
-        return .yellow
+        return UIColor(red:255.0/255.0, green:228.0/255.0, blue:181.0/255.0, alpha:1.0)
       case "Бумага":
-        return .white
+        return UIColor(red:143.0/255.0, green:188.0/255.0, blue:143.0/255.0, alpha:1.0)
       case "Металл":
-        return .gray
+        return UIColor(red:192.0/255.0, green:192.0/255.0, blue:192.0/255.0, alpha:1.0)
       case "Органика":
-        return .red
+        return UIColor(red:255.0/255.0, green:160.0/255.0, blue:122.0/255.0, alpha:1.0)
       case "Стекло":
-        return .blue
+        return UIColor(red:173.0/255.0, green:216.0/255.0, blue:230.0/255.0, alpha:1.0)
       case "Композитный":
-        return .brown
+        return UIColor(red:221.0/255.0, green:160.0/255.0, blue:221.0/255.0, alpha:1.0)
       default:
         return .green
     }

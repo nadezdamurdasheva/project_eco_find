@@ -33,12 +33,12 @@ class LearningViewController: UIViewController, UIScrollViewDelegate {
         slide1.labelDesciption.text = "Наведите камеру на маркировку для ее сканирования"
         
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide2.imageView.image = UIImage(named: "learn2")
-        slide2.labelDesciption.text = "Ищите маркировки этикеток и узнавайте актуальную информацию"
+        slide2.imageView.image = UIImage(named: "learn201")
+        slide2.labelDesciption.text = "Ищите маркировки этикеток и узнавайте о них информацию"
         
         let slide3:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide3.imageView.image = UIImage(named: "learn3")
-        slide3.labelDesciption.text = "Находите местоположение ближайших станций сортировки, отсканировав этикетку"
+        slide3.imageView.image = UIImage(named: "learn301")
+        slide3.labelDesciption.text = "Находите местоположение ближайших станций сортировки, отсканировав этикетку или выполнив поиск по маркировкам вручную"
         
         
         return [slide1, slide2, slide3]
