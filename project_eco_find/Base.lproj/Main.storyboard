@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
+        <!--Меню-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,13 +76,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="bMI-M7-Ge0"/>
+                    <navigationItem key="navigationItem" title="Меню" id="bMI-M7-Ge0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="69.642857142857139"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Карта-->
         <scene sceneID="LXM-G5-Msi">
             <objects>
                 <viewController id="Hs7-u0-DGR" customClass="MapViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3uy-zs-VGE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5ON-NA-d9H">
+                    <navigationItem key="navigationItem" title="Карта" id="5ON-NA-d9H">
                         <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="RkS-UC-Pev">
                             <connections>
                                 <segue destination="6LO-QW-Asj" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="1OG-js-JaV"/>
