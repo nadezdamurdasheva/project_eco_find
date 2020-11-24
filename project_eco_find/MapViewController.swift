@@ -20,6 +20,8 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let font = UIFont.systemFont(ofSize: 9)
+        segmentControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
         /*locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
@@ -51,7 +53,7 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func changeSegment(_ sender: UISegmentedControl) {
-        let annotations = mapView.annotations
+        mapView.addAnnotations(artworks)
         switch sender.selectedSegmentIndex {
         case 1:
             let filteredAnnotations = mapView.annotations.filter { annotation in
