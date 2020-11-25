@@ -27,6 +27,7 @@
 		0D718D4624EA6BD400B134E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D718D4424EA6BD400B134E4 /* LaunchScreen.storyboard */; };
 		0D718D5024EA8E0200B134E4 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D718D4F24EA8E0200B134E4 /* LearningViewController.swift */; };
 		0D81B96C24F17AE1006EE92F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81B96B24F17AE1006EE92F /* MapViewController.swift */; };
+		0D9AA2CF256EEB81006062B0 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AA2CE256EEB81006062B0 /* ScannerViewController.swift */; };
 		0DAAB52524EC03CA00EC38CB /* marks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DAAB52424EC03CA00EC38CB /* marks.json */; };
 		0DB048E924EBCE7D0035A1A2 /* AboutProgrammeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB048E824EBCE7D0035A1A2 /* AboutProgrammeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		0D718D4724EA6BD400B134E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D718D4F24EA8E0200B134E4 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		0D81B96B24F17AE1006EE92F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0D9AA2CE256EEB81006062B0 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		0DAAB52424EC03CA00EC38CB /* marks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = marks.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		0DB048E824EBCE7D0035A1A2 /* AboutProgrammeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProgrammeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 				0D718D3A24EA6BD300B134E4 /* MenuViewController.swift */,
 				0D718D4F24EA8E0200B134E4 /* LearningViewController.swift */,
 				0D718D3C24EA6BD300B134E4 /* Main.storyboard */,
+				0D9AA2CE256EEB81006062B0 /* ScannerViewController.swift */,
 				0D2EE6BE2569C59100E8564A /* PublicArt.geojson */,
 				0D2EE6B725695A1300E8564A /* Artwork.swift */,
 				0D2EE6C0256A851A00E8564A /* ArtworkViews.swift */,
@@ -195,6 +198,7 @@
 				0D1F2B5724EAAC2700CF5A62 /* Slide.swift in Sources */,
 				0D718D4124EA6BD300B134E4 /* project_eco_find.xcdatamodeld in Sources */,
 				0D2EE6C1256A851A00E8564A /* ArtworkViews.swift in Sources */,
+				0D9AA2CF256EEB81006062B0 /* ScannerViewController.swift in Sources */,
 				0DB048E924EBCE7D0035A1A2 /* AboutProgrammeViewController.swift in Sources */,
 				0D2B6A3924EC5AF60005B3D5 /* MarksTableViewCell.swift in Sources */,
 				0D2B6A3B24EDA25D0005B3D5 /* DetailViewController.swift in Sources */,
