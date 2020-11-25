@@ -50,9 +50,12 @@ class MapViewController: UIViewController {
           MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         segmentControl.selectedSegmentIndex = index!
+        
         loadInitialData()
         mapView.addAnnotations(artworks)
+        changeSegment(segmentControl)
     }
+    
 
     @IBAction func changeSegment(_ sender: UISegmentedControl) {
         mapView.addAnnotations(artworks)
