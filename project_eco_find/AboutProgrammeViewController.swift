@@ -22,7 +22,22 @@ class AboutProgrammeViewController: UIViewController {
         По всем интересующим вопросам по работе приложения и при возникновении проблем с функциональностью обращайтесь по адресу email:
         """
         labelEmail.text = "nadezdamurdasheva@yandex.ru"
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AboutProgrammeViewController.openMailClient))
+        labelEmail.isUserInteractionEnabled = true
+        labelEmail.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @objc func openMailClient(sender:UITapGestureRecognizer) {
+        let email = "nadezdamurdasheva@yandex.ru"
+        if let url = URL(string: "mailto:\(email)") {
+          if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url)
+          } else {
+            UIApplication.shared.openURL(url)
+          }
+        }
     }
     
 
