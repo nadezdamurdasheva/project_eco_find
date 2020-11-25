@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     private var artworks: [Artwork] = []
     let locationManager = CLLocationManager()
+    var index: Int?
     
     
     override func viewDidLoad() {
@@ -48,6 +49,7 @@ class MapViewController: UIViewController {
         forAnnotationViewWithReuseIdentifier:
           MKMapViewDefaultAnnotationViewReuseIdentifier)
         
+        segmentControl.selectedSegmentIndex = index!
         loadInitialData()
         mapView.addAnnotations(artworks)
     }

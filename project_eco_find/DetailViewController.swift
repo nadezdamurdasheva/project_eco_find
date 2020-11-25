@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var imageDetail: UIImageView!
     @IBOutlet weak var labelDetail: UILabel!
-    @IBOutlet weak var buttonSearchOnMap: UIButton!
+    //@IBOutlet weak var buttonSearchOnMap: UIButton!
     
     var image = UIImage()
     var name = ""
@@ -32,18 +32,32 @@ class DetailViewController: UIViewController {
         self.navigationController?.pushViewController(vc!, animated: true)*/
     }
     
-    @IBAction func onClickSearchOnMap(_ sender: Any) {
-    }
+    /*@IBAction func onClickSearchOnMap(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        self.navigationController?.pushViewController(nextViewController, animated: true)
+    }*/
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
+   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "toMapView" else { return }
+        guard let destination = segue.destination as? MapViewController else { return }
+        //destination.segmentControl.selectedSegmentIndex = 0
         // Pass the selected object to the new view controller.
+    }*/
+    
+    @IBAction func onSearchMap(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondViewController = storyboard.instantiateViewController(identifier: "MapViewController") as? MapViewController else { return }
+        secondViewController.index = 0
+        
+        show(secondViewController, sender: nil)
     }
-    */
+    
+    
     @IBAction func unwindToDetailViewController (segue: UIStoryboardSegue){
         
     }

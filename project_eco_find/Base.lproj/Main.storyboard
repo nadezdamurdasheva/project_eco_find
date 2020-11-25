@@ -85,7 +85,7 @@
         <!--Карта-->
         <scene sceneID="LXM-G5-Msi">
             <objects>
-                <viewController id="Hs7-u0-DGR" customClass="MapViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="Hs7-u0-DGR" customClass="MapViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hYC-eC-AvN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,24 +261,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwg-Cw-tKr">
-                                        <rect key="frame" x="0.0" y="593" width="320" height="87"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvM-BY-LF1">
+                                        <rect key="frame" x="40" y="593" width="240" height="87"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="87" id="ShI-mU-gJa"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Посмотреть на карте"/>
                                         <connections>
-                                            <segue destination="Hs7-u0-DGR" kind="show" id="0TZ-Cs-5hC"/>
+                                            <action selector="onSearchMap:" destination="e7s-zu-g4w" eventType="touchUpInside" id="116-9v-Ey8"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Vwg-Cw-tKr" firstAttribute="top" secondItem="Lsg-zn-gjp" secondAttribute="bottom" constant="47" id="8Ab-2o-M8u"/>
                                     <constraint firstItem="Lsg-zn-gjp" firstAttribute="leading" secondItem="bZt-fm-qgD" secondAttribute="leading" id="AT1-DF-mcs"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vwg-Cw-tKr" secondAttribute="trailing" id="H4E-Dd-7UY"/>
                                     <constraint firstAttribute="trailing" secondItem="Lsg-zn-gjp" secondAttribute="trailing" id="QBd-qS-XvC"/>
-                                    <constraint firstItem="Vwg-Cw-tKr" firstAttribute="leading" secondItem="bZt-fm-qgD" secondAttribute="leading" id="RXf-eu-sCH"/>
-                                    <constraint firstAttribute="bottom" secondItem="Vwg-Cw-tKr" secondAttribute="bottom" id="TDk-am-zHg"/>
                                     <constraint firstItem="Lsg-zn-gjp" firstAttribute="top" secondItem="uYF-zd-ToJ" secondAttribute="bottom" constant="47" id="VZY-Df-0Z3"/>
-                                    <constraint firstItem="Vwg-Cw-tKr" firstAttribute="top" secondItem="Lsg-zn-gjp" secondAttribute="bottom" constant="47" id="bPd-TV-vGq"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -299,7 +297,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="buttonSearchOnMap" destination="Vwg-Cw-tKr" id="y4c-Pr-fDl"/>
                         <outlet property="imageDetail" destination="uYF-zd-ToJ" id="S4Q-jC-x37"/>
                         <outlet property="labelDetail" destination="Lsg-zn-gjp" id="XWU-rl-Cdq"/>
                     </connections>
@@ -758,7 +755,4 @@
             <point key="canvasLocation" x="1047.8260869565217" y="69.642857142857139"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ppm-sL-L4d"/>
-    </inferredMetricsTieBreakers>
 </document>
