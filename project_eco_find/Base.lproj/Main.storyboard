@@ -22,6 +22,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Сканирование упаковки"/>
+                                        <connections>
+                                            <segue destination="rFK-Bi-iYi" kind="show" id="cga-fA-sL8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjp-Ze-3qn">
                                         <rect key="frame" x="0.0" y="76" width="374" height="36"/>
@@ -148,6 +151,74 @@
                 <exit id="6LO-QW-Asj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3757.971014492754" y="95.758928571428569"/>
+        </scene>
+        <!--Сканирование-->
+        <scene sceneID="5KL-Ap-fBW">
+            <objects>
+                <viewController storyboardIdentifier="ScannerViewController" id="rFK-Bi-iYi" customClass="ScannerViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ua2-FG-zw7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ZE-NM-FrI">
+                                <rect key="frame" x="107" y="384" width="200" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IOh-JU-gWK"/>
+                                    <constraint firstAttribute="height" constant="128" id="PkP-bC-Q1d"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y1k-ms-vt8">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="eIe-MU-lRj"/>
+                                    <constraint firstAttribute="width" constant="200" id="f2c-HQ-qf5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afz-LZ-p5g">
+                                <rect key="frame" x="130" y="588" width="154" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="62Q-zU-jeU"/>
+                                    <constraint firstAttribute="width" constant="154" id="6bC-KB-ap8"/>
+                                </constraints>
+                                <state key="normal" title="Сделать фотографию"/>
+                                <connections>
+                                    <action selector="btnTakePicture:" destination="rFK-Bi-iYi" eventType="touchUpInside" id="L35-8n-RVV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y1k-ms-vt8" firstAttribute="centerY" secondItem="ua2-FG-zw7" secondAttribute="centerY" id="Hr1-pU-kZ1"/>
+                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="centerX" secondItem="ua2-FG-zw7" secondAttribute="centerX" id="VIJ-tJ-RTw"/>
+                            <constraint firstItem="y1k-ms-vt8" firstAttribute="centerX" secondItem="ua2-FG-zw7" secondAttribute="centerX" id="enP-7x-Ddc"/>
+                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="centerY" secondItem="ua2-FG-zw7" secondAttribute="centerY" id="leY-vd-h3R"/>
+                            <constraint firstItem="Afz-LZ-p5g" firstAttribute="top" secondItem="y1k-ms-vt8" secondAttribute="bottom" constant="40" id="pgQ-h3-qSw"/>
+                            <constraint firstItem="Afz-LZ-p5g" firstAttribute="centerX" secondItem="y1k-ms-vt8" secondAttribute="centerX" id="yYN-Mg-mmz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ey7-JN-S1F"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Сканирование" id="FVR-8N-vFL">
+                        <barButtonItem key="backBarButtonItem" title="В меню" id="6zu-dx-W9F"/>
+                        <barButtonItem key="leftBarButtonItem" title="В меню" id="KMh-Kf-rx9">
+                            <connections>
+                                <segue destination="p8a-tK-YXS" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="o0f-J0-wC5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="y1k-ms-vt8" id="Xze-Ui-fbb"/>
+                        <outlet property="textView" destination="0ZE-NM-FrI" id="tFX-YW-msi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYq-QB-KoL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="p8a-tK-YXS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1340.5797101449277" y="-739.28571428571422"/>
         </scene>
         <!--Категории упаковок-->
         <scene sceneID="R3p-I5-H2p">

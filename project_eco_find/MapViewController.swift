@@ -34,6 +34,12 @@ class MapViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        //ВАЖНО СВЕРХУ ПОСЛЕДНЕЕ
+        /*locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()*/
         // Do any additional setup after loading the view.
         
         //show point on a map
