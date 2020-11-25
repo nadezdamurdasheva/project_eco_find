@@ -28,10 +28,6 @@
 		0D718D5024EA8E0200B134E4 /* LearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D718D4F24EA8E0200B134E4 /* LearningViewController.swift */; };
 		0D81B96C24F17AE1006EE92F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D81B96B24F17AE1006EE92F /* MapViewController.swift */; };
 		0D9AA2CF256EEB81006062B0 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AA2CE256EEB81006062B0 /* ScannerViewController.swift */; };
-		0D9AA2D1256F0E8F006062B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AA2D0256F0E8F006062B0 /* ViewController.swift */; };
-		0D9AA2D3256F0EB9006062B0 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AA2D2256F0EB9006062B0 /* PreviewView.swift */; };
-		0D9AA2D5256F0ED0006062B0 /* VisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AA2D4256F0ED0006062B0 /* VisionViewController.swift */; };
-		0D9AA2D7256F0EEB006062B0 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9AA2D6256F0EEB006062B0 /* StringUtils.swift */; };
 		0DAAB52524EC03CA00EC38CB /* marks.json in Resources */ = {isa = PBXBuildFile; fileRef = 0DAAB52424EC03CA00EC38CB /* marks.json */; };
 		0DB048E924EBCE7D0035A1A2 /* AboutProgrammeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB048E824EBCE7D0035A1A2 /* AboutProgrammeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -60,10 +56,6 @@
 		0D718D4F24EA8E0200B134E4 /* LearningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningViewController.swift; sourceTree = "<group>"; };
 		0D81B96B24F17AE1006EE92F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0D9AA2CE256EEB81006062B0 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
-		0D9AA2D0256F0E8F006062B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D9AA2D2256F0EB9006062B0 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
-		0D9AA2D4256F0ED0006062B0 /* VisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionViewController.swift; sourceTree = "<group>"; };
-		0D9AA2D6256F0EEB006062B0 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		0DAAB52424EC03CA00EC38CB /* marks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = marks.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		0DB048E824EBCE7D0035A1A2 /* AboutProgrammeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProgrammeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,10 +95,6 @@
 				0D718D3A24EA6BD300B134E4 /* MenuViewController.swift */,
 				0D718D4F24EA8E0200B134E4 /* LearningViewController.swift */,
 				0D718D3C24EA6BD300B134E4 /* Main.storyboard */,
-				0D9AA2D0256F0E8F006062B0 /* ViewController.swift */,
-				0D9AA2D2256F0EB9006062B0 /* PreviewView.swift */,
-				0D9AA2D4256F0ED0006062B0 /* VisionViewController.swift */,
-				0D9AA2D6256F0EEB006062B0 /* StringUtils.swift */,
 				0D9AA2CE256EEB81006062B0 /* ScannerViewController.swift */,
 				0D2EE6BE2569C59100E8564A /* PublicArt.geojson */,
 				0D2EE6B725695A1300E8564A /* Artwork.swift */,
@@ -210,16 +198,12 @@
 				0D1F2B5724EAAC2700CF5A62 /* Slide.swift in Sources */,
 				0D718D4124EA6BD300B134E4 /* project_eco_find.xcdatamodeld in Sources */,
 				0D2EE6C1256A851A00E8564A /* ArtworkViews.swift in Sources */,
-				0D9AA2D7256F0EEB006062B0 /* StringUtils.swift in Sources */,
 				0D9AA2CF256EEB81006062B0 /* ScannerViewController.swift in Sources */,
-				0D9AA2D3256F0EB9006062B0 /* PreviewView.swift in Sources */,
-				0D9AA2D5256F0ED0006062B0 /* VisionViewController.swift in Sources */,
 				0DB048E924EBCE7D0035A1A2 /* AboutProgrammeViewController.swift in Sources */,
 				0D2B6A3924EC5AF60005B3D5 /* MarksTableViewCell.swift in Sources */,
 				0D2B6A3B24EDA25D0005B3D5 /* DetailViewController.swift in Sources */,
 				0D2B6A3324EC21DD0005B3D5 /* MarksListTableViewController.swift in Sources */,
 				0D3FC82124F123B5005B1811 /* Question.swift in Sources */,
-				0D9AA2D1256F0E8F006062B0 /* ViewController.swift in Sources */,
 				0D2EE6B825695A1300E8564A /* Artwork.swift in Sources */,
 				0D3FC82324F123EA005B1811 /* ResultsViewController.swift in Sources */,
 				0D718D3924EA6BD300B134E4 /* SceneDelegate.swift in Sources */,
