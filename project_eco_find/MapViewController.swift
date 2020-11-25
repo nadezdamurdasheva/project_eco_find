@@ -18,9 +18,11 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     var index: Int?
     
+    @IBOutlet weak var rightBarItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let font = UIFont.systemFont(ofSize: 9)
         segmentControl.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
         /*locationManager.requestWhenInUseAuthorization()
@@ -54,6 +56,9 @@ class MapViewController: UIViewController {
         loadInitialData()
         mapView.addAnnotations(artworks)
         changeSegment(segmentControl)
+        
+        rightBarItem.isEnabled = ((index != nil) ? true : false)
+        rightBarItem.tintColor = ((index != nil) ? UIColor.link : UIColor.clear)
     }
     
 

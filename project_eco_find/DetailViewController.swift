@@ -70,6 +70,10 @@ class DetailViewController: UIViewController {
         default:
             secondViewController.index = 0
         }
+        /*rightBarItem.isEnabled = false
+        rightBarItem.tintColor = UIColor.clear*/
+        /*rightBarItem.isEnabled = true
+        rightBarItem.tintColor = UIColor.blue*/
         
         show(secondViewController, sender: nil)
     }

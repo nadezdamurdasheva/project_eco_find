@@ -140,6 +140,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="gEh-jw-fm4" id="dhw-53-qxF"/>
+                        <outlet property="rightBarItem" destination="b7O-iu-5u8" id="Max-sX-WdW"/>
                         <outlet property="segmentControl" destination="UiY-zs-4p0" id="2CA-UF-WnH"/>
                     </connections>
                 </viewController>
