@@ -49,7 +49,7 @@ class MapViewController: UIViewController {
         forAnnotationViewWithReuseIdentifier:
           MKMapViewDefaultAnnotationViewReuseIdentifier)
         
-        segmentControl.selectedSegmentIndex = index!
+        segmentControl.selectedSegmentIndex = ((index != nil) ? index : 0)!
         
         loadInitialData()
         mapView.addAnnotations(artworks)
