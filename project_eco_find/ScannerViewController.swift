@@ -11,13 +11,6 @@ import VisionKit
 import Vision
 
 class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDelegate {
-
-   /* override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }*/
-    
     @IBOutlet weak var searchMapViaScan: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
@@ -48,9 +41,6 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
                 print("text \(topCandidate.string) has confidence \(topCandidate.confidence)")
     
                 detectedText += topCandidate.string
-                //detectedText += "\n"
-                
-            
             }
             
             DispatchQueue.main.async {
@@ -115,8 +105,6 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
                     self.searchMapViaScan.isHidden = true
                     self.textView.text = "Не удалось отсканировать маркировку. Сфотографируйте и отсканируйте маркировку повторно."
                 }
-                
-
             }
         }
 
@@ -177,47 +165,22 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let secondViewController = storyboard.instantiateViewController(identifier: "MapViewController") as? MapViewController else { return }
         switch textView.text {
-        /*case "PET","PE","PE-HD","PEHD","HDPE","PVC","PE-LD","PELD","LDPE","PP","PS","O","OTHER","ABS","pet","pe","pe-hd","pehd","hdpe","pvc","pe-ld","peld","ldpe","pp","ps","o","other","abs":*/
         case "PET. Полиэтилентерефталат (лавсан), пластмасса.", "PE PE-HD PEHD HDPE. Полиэтилен высокой плотности (низкого давления), пластмасса.","PVC. Поливинилхлорид, пластмасса.","PE-LD PELD LDPE. Полиэтилен низкой плотности (высокого давления), пластмасса.","PP. Полистирол, пластмасса.","PS. Полистирол, пластмасса.","O OTHER. Остальные виды пластика, пластмасса.","ABS. АБС-пластик, пластмасса.":
             secondViewController.index = 1
-        /*case "PAP","PCB","PPB","PBD","pap","pcb","ppb","pbd":*/
         case "PAP PCB. Гофрированный картон, бумага.","PAP. Бумага.","PAP PPB. Вощённая бумага.":
             secondViewController.index = 2
-        /*case "FE","ALU","fe","alu":*/
         case "FE. Сталь, металл.","ALU. Алюминий, металл.":
             secondViewController.index = 3
-        /*case "FOR","TEX","COT","for","tex","cot":*/
         case "FOR. Древесина, органический материал.","TEX. Хлопок или джутовое волокно, органический материал.","TEX COT. Джутовое волокно, органический материал.":
             secondViewController.index = 4
-        /*case "GLS","GL","gls","gl":*/
         case "GL GLS. Стекло":
             secondViewController.index = 5
-        /*case "PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak","c/pp","C/PP":*/
         case "PapPet C/PAP C/PP TetraPak. Комопзиционный материал":
             secondViewController.index = 6
         default:
             secondViewController.index = 0
-            /*textView.text = "Не удалось отсканировать маркировку. Сфотографируйте и отсканируйте маркировку повторно"
-            searchMapViaScan.isHidden = true*/
         }
-        /*rightBarItem.isEnabled = false
-        rightBarItem.tintColor = UIColor.clear*/
-        /*rightBarItem.isEnabled = true
-        rightBarItem.tintColor = UIColor.blue*/
-        //secondViewController.index = nil
         secondViewController.rightBarItem.isEnabled = false
         show(secondViewController, sender: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

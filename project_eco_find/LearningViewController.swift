@@ -40,7 +40,6 @@ class LearningViewController: UIViewController, UIScrollViewDelegate {
         slide3.imageView.image = UIImage(named: "learn301")
         slide3.labelDesciption.text = "Находите местоположение ближайших станций сортировки, отсканировав этикетку или выполнив поиск по маркировкам вручную"
         
-        
         return [slide1, slide2, slide3]
     }
     
@@ -55,7 +54,6 @@ class LearningViewController: UIViewController, UIScrollViewDelegate {
             slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
             scrollView.addSubview(slides[i])
         }
-       
     }
     
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -71,17 +69,6 @@ class LearningViewController: UIViewController, UIScrollViewDelegate {
             
             let percentageHorizontalOffset: CGFloat = currentHorizontalOffset / maximumHorizontalOffset
             let percentageVerticalOffset: CGFloat = currentVerticalOffset / maximumVerticalOffset
-            
-            
-            /*
-             * below code changes the background color of view on paging the scrollview
-             */
-    //        self.scrollView(scrollView, didScrollToPercentageOffset: percentageHorizontalOffset)
-            
-        
-            /*
-             * below code scales the imageview on paging the scrollview
-             */
             let percentOffset: CGPoint = CGPoint(x: percentageHorizontalOffset, y: percentageVerticalOffset)
             
             if(percentOffset.x > 0 && percentOffset.x <= 0.5) {
@@ -92,8 +79,6 @@ class LearningViewController: UIViewController, UIScrollViewDelegate {
             } else if(percentOffset.x > 0.5 && percentOffset.x <= 1) {
                 slides[1].imageView.transform = CGAffineTransform(scaleX: (1-percentOffset.x)/0.5, y: (1-percentOffset.x)/0.5)
                 slides[2].imageView.transform = CGAffineTransform(scaleX: percentOffset.x, y: percentOffset.x)
-                
-            
         }
     }
 

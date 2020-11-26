@@ -75,34 +75,15 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
         Marks(name: "Tetra Pak, Тетра Пак, картон, полиэтилен, алюминий, композиционный материал", category: "Композиционные материалы" , desc: ". Упаковка для сока, молока.", pict: UIImage(named: "signTetrapak")!),
       ]
     
- 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBarMarks.delegate = self
         searchData = allMarks
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 6
     }
-    /*override func tableView(_ tableView: UITableView, titleForHeaderInSection
-                                section: Int) -> String? {
-        if searching {
-            return searchData[section].category
-        }else {
-            return allMarks[section].category
-        }
-    }*/
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
@@ -123,8 +104,6 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             }
             return searchData.filter({$0.category == "Композиционные материалы"}).count
             }
-            //return searchData[section].name!.count//
-            //return searchData.count
         else {
             if section == 0 {
                 return allMarks.filter({$0.category == "Пластмассы"}).count
@@ -143,8 +122,6 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
             }
             return allMarks.filter({$0.category == "Композиционные материалы"}).count
         }
-        //return allMarks[section].name!.count//
-        //return allMarks.count
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -201,7 +178,6 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
         let boldText = NSAttributedString(string: label.text!, attributes: boldAttribute)
         label.attributedText = boldText
         label.textAlignment = .center
-        //label.backgroundColor = .systemGray6
         return label
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -215,12 +191,10 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
                 cell.backgroundColor = UIColor(red:255.0/255.0, green:228.0/255.0, blue:181.0/255.0, alpha:1.0)
-                //cell.backgroundColor = .white
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
             cell.backgroundColor = UIColor(red:255.0/255.0, green:228.0/255.0, blue:181.0/255.0, alpha:1.0)
-            //cell.backgroundColor = .white
             }
         }
         if indexPath.section == 1 {
@@ -231,12 +205,10 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
                 cell.backgroundColor = UIColor(red:143.0/255.0, green:188.0/255.0, blue:143.0/255.0, alpha:1.0)
-                //cell.backgroundColor = .systemGray5
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
             cell.backgroundColor = UIColor(red:143.0/255.0, green:188.0/255.0, blue:143.0/255.0, alpha:1.0)
-            //cell.backgroundColor = .systemGray5
             }
         }
         if indexPath.section == 2 {
@@ -247,12 +219,10 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
                 cell.backgroundColor = UIColor(red:192.0/255.0, green:192.0/255.0, blue:192.0/255.0, alpha:1.0)
-                //cell.backgroundColor = .systemGray4
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
             cell.backgroundColor = UIColor(red:192.0/255.0, green:192.0/255.0, blue:192.0/255.0, alpha:1.0)
-            //cell.backgroundColor = .systemGray4
             }
         }
         if indexPath.section == 3 {
@@ -263,12 +233,10 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
                 cell.backgroundColor = UIColor(red:255.0/255.0, green:160.0/255.0, blue:122.0/255.0, alpha:1.0)
-                //cell.backgroundColor = .systemGray3
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
             cell.backgroundColor = UIColor(red:255.0/255.0, green:160.0/255.0, blue:122.0/255.0, alpha:1.0)
-            //cell.backgroundColor = .systemGray3
             }
         }
         if indexPath.section == 4 {
@@ -279,12 +247,10 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
                 cell.backgroundColor = UIColor(red:173.0/255.0, green:216.0/255.0, blue:230.0/255.0, alpha:1.0)
-                //cell.backgroundColor = .systemGray2
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
             cell.backgroundColor = UIColor(red:173.0/255.0, green:216.0/255.0, blue:230.0/255.0, alpha:1.0)
-            //cell.backgroundColor = .systemGray2
             }
         }
         if indexPath.section == 5 {
@@ -295,51 +261,24 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
                 cell.labelCell?.text = marksCellSearch.name
                 cell.imageCell?.image = marksCellSearch.pict
                 cell.backgroundColor = UIColor(red:221.0/255.0, green:160.0/255.0, blue:221.0/255.0, alpha:1.0)
-                //cell.backgroundColor = .systemGray
             } else{
             cell.labelCell?.text = marksCell.name
             cell.imageCell?.image = marksCell.pict
             cell.backgroundColor = UIColor(red:221.0/255.0, green:160.0/255.0, blue:221.0/255.0, alpha:1.0)
-            //cell.backgroundColor = .systemGray
             }
         }
-        /*let marksCell = allMarks[indexPath.row]
-        let marksCellSearch = searchData[indexPath.row]*/
-        
-        /*if searching {
-            cell.labelCell?.text = marksCellSearch.name
-            cell.imageCell?.image = marksCellSearch.pict
-        } else{
-        cell.labelCell?.text = marksCell.name
-        cell.imageCell?.image = marksCell.pict
-        }*/
         return cell
          
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchData = allMarks.filter({($0.name!.lowercased().prefix(searchText.count) == searchText.lowercased()) || ($0.name!.lowercased().suffix(searchText.count) == searchText.lowercased()) || ($0.name!.lowercased().contains(searchText.lowercased()))})
-        /*searchData = allMarks.filter({$0.name!.lowercased().contains(searchText.lowercased())})*/
-        
         searching = true
         tableView.reloadData()}
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: "DetailViewController") as? DetailViewController
         self.navigationController?.pushViewController(vc!, animated: true)
-        /*if searching {
-            vc?.image = searchData[indexPath.row].pict!
-            vc?.name = searchData[indexPath.row].name! + searchData[indexPath.row].desc!
-        } else {
-            vc?.image = allMarks[indexPath.row].pict!
-            vc?.name = allMarks[indexPath.row].name! + allMarks[indexPath.row].desc!
-        }*/
-        
-        
         var newArrayMarks = allMarks
         var newArrayMarksSearch = searchData
-        /*let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MarksTableViewCell
-        vc!.imageDetail = cell.imageCell
-        vc!.labelDetail = cell.labelCell*/
-        
         if searching {
             if indexPath.section == 0 {
                newArrayMarksSearch = newArrayMarksSearch.filter({$0.category! == "Пластмассы"})
@@ -403,76 +342,13 @@ class MarksListTableViewController: UITableViewController,UISearchBarDelegate {
                  vc?.name = newArrayMarks[indexPath.row].name! + newArrayMarks[indexPath.row].desc!
             }
         }
-       
-        //vc?.image = allMarks[indexPath.section][indexPath.row].pict!
-        
-        //vc?.image = allMarks[indexPath.row].pict!
-        
-        //vc?.name = allMarks[indexPath.section].name! + allMarks[indexPath.section].desc!
-        
-        
-        
-        
     }
     @IBAction func unwindToMarksListTableViewController (segue: UIStoryboardSegue){
         
     }
 }
 
-    
-    
-       /*func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-           searching = false
-           searchBarMarks.text = ""
-           tableView.reloadData()
-       }*/
-    
 
     
- 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 

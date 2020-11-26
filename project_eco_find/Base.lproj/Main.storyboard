@@ -418,7 +418,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageDetail" destination="uYF-zd-ToJ" id="S4Q-jC-x37"/>
+                        <outlet property="imageDetail" destination="uYF-zd-ToJ" id="BPU-3Y-f8W"/>
                         <outlet property="labelDetail" destination="Lsg-zn-gjp" id="XWU-rl-Cdq"/>
                     </connections>
                 </viewController>
@@ -506,17 +506,22 @@
                         <viewLayoutGuide key="safeArea" id="oxU-id-WPT"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qkj-r7-yQ8">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="zdw-eT-eHC"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="zdw-eT-eHC">
+                            <connections>
+                                <segue destination="jRC-bo-G4t" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="njQ-22-iic"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVd-Em-wjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jRC-bo-G4t" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-104.34782608695653" y="2037.7232142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--States Menu View Controller-->
         <scene sceneID="LEb-oF-BOH">
             <objects>
-                <viewController id="XKU-Er-7JE" sceneMemberID="viewController">
+                <viewController id="XKU-Er-7JE" customClass="StatesMenuViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ax1-zg-Ktz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -795,10 +800,15 @@
                         <viewLayoutGuide key="safeArea" id="Zeb-ag-A0e"/>
                     </view>
                     <navigationItem key="navigationItem" id="kAQ-gR-IJ1">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="ZxL-vy-g8Y"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="ZxL-vy-g8Y">
+                            <connections>
+                                <segue destination="D4n-OB-r6b" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="Pii-FU-BwU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGb-Lf-Hag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="D4n-OB-r6b" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="120.28985507246378" y="2809.8214285714284"/>
         </scene>
@@ -822,10 +832,15 @@
                         <viewLayoutGuide key="safeArea" id="94C-8z-qrx"/>
                     </view>
                     <navigationItem key="navigationItem" id="I5X-mm-2un">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="ypx-UE-rSn"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="ypx-UE-rSn">
+                            <connections>
+                                <segue destination="agf-xX-XTH" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="XWq-SG-KF2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ni-YA-JY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="agf-xX-XTH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="352" y="3465"/>
         </scene>
@@ -849,10 +864,15 @@
                         <viewLayoutGuide key="safeArea" id="Odj-08-Z0k"/>
                     </view>
                     <navigationItem key="navigationItem" id="aqz-wy-hLZ">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="IKd-86-LY2"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="IKd-86-LY2">
+                            <connections>
+                                <segue destination="xTY-xS-VXL" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="lce-jJ-hfb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3O-eG-f0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xTY-xS-VXL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1048" y="2738"/>
         </scene>
@@ -876,10 +896,15 @@
                         <viewLayoutGuide key="safeArea" id="xte-qI-y41"/>
                     </view>
                     <navigationItem key="navigationItem" id="N5w-61-LND">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="Jxe-v6-ehG"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="Jxe-v6-ehG">
+                            <connections>
+                                <segue destination="8Jl-rP-CQY" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="HjU-hL-6ZO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N7o-oa-xZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8Jl-rP-CQY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2015.9420289855075" y="3305.3571428571427"/>
         </scene>
@@ -903,10 +928,15 @@
                         <viewLayoutGuide key="safeArea" id="Qdb-an-sm0"/>
                     </view>
                     <navigationItem key="navigationItem" id="WZU-pd-miJ">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="eka-80-SQA"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="eka-80-SQA">
+                            <connections>
+                                <segue destination="C1N-ST-eoJ" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="b5t-jm-n2p"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHO-vQ-N1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="C1N-ST-eoJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2295.6521739130435" y="2531.9196428571427"/>
         </scene>
@@ -930,10 +960,15 @@
                         <viewLayoutGuide key="safeArea" id="Bxo-te-IlM"/>
                     </view>
                     <navigationItem key="navigationItem" id="YQW-3x-9VQ">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" id="dUl-uA-0ux"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="dUl-uA-0ux">
+                            <connections>
+                                <segue destination="Tza-QL-sRp" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="muZ-K0-1c7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uN2-9B-vgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Tza-QL-sRp" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3271.0144927536235" y="2775"/>
         </scene>

@@ -14,6 +14,22 @@
             filePath = "project_eco_find/LearningViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "setupSlideScrollView(slides:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC1F83FA-14B7-40FD-8BD6-7DBFD62FA3B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "project_eco_find/LearningViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "setupSlideScrollView(slides:)"
@@ -23,7 +39,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DC1F83FA-14B7-40FD-8BD6-7DBFD62FA3B5"
+            uuid = "9C7452DA-F2D3-49F5-86B6-1CFC0F6BFB0F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -39,15 +55,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9C7452DA-F2D3-49F5-86B6-1CFC0F6BFB0F"
+            uuid = "2AB75277-4E7C-4CF4-8A17-F8BA242F7180"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "project_eco_find/LearningViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "setupSlideScrollView(slides:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -55,7 +71,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2AB75277-4E7C-4CF4-8A17-F8BA242F7180"
+            uuid = "CFDFD8D6-12B7-4531-B373-806A3EE34E52"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -71,22 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CFDFD8D6-12B7-4531-B373-806A3EE34E52"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "project_eco_find/LearningViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "setupSlideScrollView(slides:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B540E502-3E1C-4E35-A157-FE65180F0155"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -94,8 +94,8 @@
             filePath = "project_eco_find/MarksListTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "420"
-            endingLineNumber = "420"
+            startingLineNumber = "349"
+            endingLineNumber = "349"
             landmarkName = "MarksListTableViewController"
             landmarkType = "3">
          </BreakpointContent>

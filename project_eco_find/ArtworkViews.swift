@@ -18,7 +18,6 @@ class ArtworkMarkerView: MKMarkerAnnotationView {
       }
       canShowCallout = true
       calloutOffset = CGPoint(x: -5, y: 5)
-      //rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         let mapsButton = UIButton(frame: CGRect(
           origin: CGPoint.zero,
           size: CGSize(width: 48, height: 48)))
