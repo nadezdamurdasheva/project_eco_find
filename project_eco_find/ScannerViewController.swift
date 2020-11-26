@@ -57,7 +57,59 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
                 self.textView.text = detectedText
                 self.textView.flashScrollIndicators()
                 switch self.textView.text {
-                case "PET","PE","PE-HD","PEHD","HDPE","PVC","PE-LD","PELD","LDPE","PP","PS","O","OTHER","ABS","pet","pe","pe-hd","pehd","hdpe","pvc","pe-ld","peld","ldpe","pp","ps","o","other","abs","PAP","PCB","PPB","pap","pcb","ppb","FE","ALU","fe","alu","FOR","TEX","COT","for","tex","cot","GLS","GL","gls","gl","PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak":
+                case "PET","pet":
+                    self.textView.text = "PET. Полиэтилентерефталат (лавсан), пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case "PE","PE-HD","PEHD","HDPE","pe","pe-hd","pehd","hdpe":
+                    self.textView.text = "PE PE-HD PEHD HDPE. Полиэтилен высокой плотности (низкого давления), пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case  "PVC","pvc":
+                    self.textView.text = "PVC. Поливинилхлорид, пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case "PE-LD","PELD","LDPE","pe-ld","peld","ldpe":
+                    self.textView.text = "PE-LD PELD LDPE. Полиэтилен низкой плотности (высокого давления), пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case "PP","pp":
+                    self.textView.text = "PP. Полистирол, пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case "PS","ps":
+                    self.textView.text = "PS. Полистирол, пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case "O","OTHER","o","other":
+                    self.textView.text = "O OTHER. Остальные виды пластика, пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case "ABS","abs":
+                    self.textView.text = "ABS. АБС-пластик, пластмасса."
+                    self.searchMapViaScan.isHidden = false
+                case "PCB","pcb":
+                    self.textView.text = "PAP PCB. Гофрированный картон, бумага."
+                    self.searchMapViaScan.isHidden = false
+                case "PAP","pap":
+                    self.textView.text = "PAP. Бумага."
+                    self.searchMapViaScan.isHidden = false
+                case "PPB","ppb":
+                    self.textView.text = "PAP PPB. Вощённая бумага."
+                    self.searchMapViaScan.isHidden = false
+                case "FE","fe":
+                    self.textView.text = "FE. Сталь, металл."
+                    self.searchMapViaScan.isHidden = false
+                case "ALU","alu":
+                    self.textView.text = "ALU. Алюминий, металл."
+                    self.searchMapViaScan.isHidden = false
+                case "FOR","for":
+                    self.textView.text = "FOR. Древесина, органический материал."
+                    self.searchMapViaScan.isHidden = false
+                case "TEX","tex":
+                    self.textView.text = "TEX. Хлопок или джутовое волокно, органический материал."
+                    self.searchMapViaScan.isHidden = false
+                case "COT","cot":
+                    self.textView.text = "TEX COT. Джутовое волокно, органический материал."
+                    self.searchMapViaScan.isHidden = false
+                case "GLS","GL","gls","gl":
+                    self.textView.text = "GL GLS. Стекло"
+                    self.searchMapViaScan.isHidden = false
+                case "PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak","C/PP","c/pp":
+                    self.textView.text = "PapPet C/PAP C/PP TetraPak. Комопзиционный материал"
                     self.searchMapViaScan.isHidden = false
                 default:
                     self.searchMapViaScan.isHidden = true
@@ -125,17 +177,23 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let secondViewController = storyboard.instantiateViewController(identifier: "MapViewController") as? MapViewController else { return }
         switch textView.text {
-        case "PET","PE","PE-HD","PEHD","HDPE","PVC","PE-LD","PELD","LDPE","PP","PS","O","OTHER","ABS","pet","pe","pe-hd","pehd","hdpe","pvc","pe-ld","peld","ldpe","pp","ps","o","other","abs":
+        /*case "PET","PE","PE-HD","PEHD","HDPE","PVC","PE-LD","PELD","LDPE","PP","PS","O","OTHER","ABS","pet","pe","pe-hd","pehd","hdpe","pvc","pe-ld","peld","ldpe","pp","ps","o","other","abs":*/
+        case "PET. Полиэтилентерефталат (лавсан), пластмасса.", "PE PE-HD PEHD HDPE. Полиэтилен высокой плотности (низкого давления), пластмасса.","PVC. Поливинилхлорид, пластмасса.","PE-LD PELD LDPE. Полиэтилен низкой плотности (высокого давления), пластмасса.","PP. Полистирол, пластмасса.","PS. Полистирол, пластмасса.","O OTHER. Остальные виды пластика, пластмасса.","ABS. АБС-пластик, пластмасса.":
             secondViewController.index = 1
-        case "PAP","PCB","PPB","PBD","pap","pcb","ppb","pbd":
+        /*case "PAP","PCB","PPB","PBD","pap","pcb","ppb","pbd":*/
+        case "PAP PCB. Гофрированный картон, бумага.","PAP. Бумага.","PAP PPB. Вощённая бумага.":
             secondViewController.index = 2
-        case "FE","ALU","fe","alu":
+        /*case "FE","ALU","fe","alu":*/
+        case "FE. Сталь, металл.","ALU. Алюминий, металл.":
             secondViewController.index = 3
-        case "FOR","TEX","COT","for","tex","cot":
+        /*case "FOR","TEX","COT","for","tex","cot":*/
+        case "FOR. Древесина, органический материал.","TEX. Хлопок или джутовое волокно, органический материал.","TEX COT. Джутовое волокно, органический материал.":
             secondViewController.index = 4
-        case "GLS","GL","gls","gl":
+        /*case "GLS","GL","gls","gl":*/
+        case "GL GLS. Стекло":
             secondViewController.index = 5
-        case "PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak":
+        /*case "PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak","c/pp","C/PP":*/
+        case "PapPet C/PAP C/PP TetraPak. Комопзиционный материал":
             secondViewController.index = 6
         default:
             secondViewController.index = 0
