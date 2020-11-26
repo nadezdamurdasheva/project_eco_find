@@ -60,7 +60,7 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
                 case "PET","PE","PE-HD","PEHD","HDPE","PVC","PE-LD","PELD","LDPE","PP","PS","O","OTHER","ABS","pet","pe","pe-hd","pehd","hdpe","pvc","pe-ld","peld","ldpe","pp","ps","o","other","abs","PAP","PCB","PPB","pap","pcb","ppb","FE","ALU","fe","alu","FOR","TEX","COT","for","tex","cot","GLS","GL","gls","gl","PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak":
                     self.searchMapViaScan.isHidden = false
                 default:
-                    self.searchMapViaScan.isHidden = false
+                    self.searchMapViaScan.isHidden = true
                     self.textView.text = "Не удалось отсканировать маркировку. Сфотографируйте и отсканируйте маркировку повторно."
                 }
                 
