@@ -55,7 +55,7 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Обучающие статьи и игры"/>
                                         <connections>
-                                            <segue destination="Xuh-Vj-Kxk" kind="show" id="qfH-WJ-MbC"/>
+                                            <segue destination="MYG-TG-1iS" kind="show" id="vSr-rw-9rh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rL-id-zU2">
@@ -486,67 +486,81 @@
             </objects>
             <point key="canvasLocation" x="2156.521739130435" y="797.54464285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Game And States Menu View Controller-->
         <scene sceneID="RkJ-ZA-Ojw">
             <objects>
-                <viewController id="MYG-TG-1iS" sceneMemberID="viewController">
+                <viewController id="MYG-TG-1iS" customClass="GameAndStatesMenuViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uQN-Xb-gSF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="0rf-gE-23k">
-                                <rect key="frame" x="159.5" y="361.5" width="95" height="173"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Lql-nz-5sa">
+                                <rect key="frame" x="122" y="370" width="170" height="156"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfi-sm-p62">
-                                        <rect key="frame" x="0.0" y="0.0" width="95" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="48"/>
+                                        <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="UBZ-rI-yGA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Статьи"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O2-AP-f2w">
-                                        <rect key="frame" x="11.5" y="125" width="72" height="48"/>
+                                        <rect key="frame" x="0.0" y="108" width="170" height="48"/>
+                                        <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Игры"/>
+                                        <connections>
+                                            <segue destination="Oqg-lW-Afa" kind="show" id="B89-BE-0on"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="0rf-gE-23k" firstAttribute="centerX" secondItem="uQN-Xb-gSF" secondAttribute="centerX" id="4v7-Fh-MIs"/>
-                            <constraint firstItem="0rf-gE-23k" firstAttribute="centerY" secondItem="uQN-Xb-gSF" secondAttribute="centerY" id="gFO-YV-Bzk"/>
+                            <constraint firstItem="Lql-nz-5sa" firstAttribute="centerY" secondItem="uQN-Xb-gSF" secondAttribute="centerY" id="O1j-qf-9pO"/>
+                            <constraint firstItem="Lql-nz-5sa" firstAttribute="centerX" secondItem="uQN-Xb-gSF" secondAttribute="centerX" id="omK-zg-dyS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RFV-Xh-vWE"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Gnu-3F-Agg">
+                        <barButtonItem key="leftBarButtonItem" title="В меню" id="M2c-hU-YbD">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="e1V-dl-BiT" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="oIa-0l-v1A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmf-Jq-tca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="e1V-dl-BiT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2374" y="1548"/>
+            <point key="canvasLocation" x="2183" y="1588"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Menu View Controller-->
         <scene sceneID="1qC-Jy-izU">
             <objects>
-                <viewController id="Oqg-lW-Afa" sceneMemberID="viewController">
+                <viewController id="Oqg-lW-Afa" customClass="GameMenuViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3x-Vn-czD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-wp-HxW">
-                                <rect key="frame" x="137.5" y="324" width="139" height="248"/>
+                                <rect key="frame" x="35" y="428" width="344" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7s-ht-EwM">
-                                        <rect key="frame" x="0.0" y="0.0" width="139" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Игра-тест"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD9-Bc-BfJ">
-                                        <rect key="frame" x="0.0" y="100" width="139" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Игра2"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Iu-Nj-FlY">
-                                        <rect key="frame" x="0.0" y="200" width="139" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Игра3"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="40"/>
+                                        <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Тест &quot;Насколько вы экологичны&quot;"/>
+                                        <connections>
+                                            <segue destination="Xuh-Vj-Kxk" kind="show" id="QsK-LS-8VH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -558,10 +572,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bpi-GW-wdq"/>
                     </view>
+                    <navigationItem key="navigationItem" id="USG-s7-zjL">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="vjE-H3-Jf7">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="IVs-Vr-IuI" kind="unwind" unwindAction="unwindToGameAndStatesMenuWindowWithSegue:" id="m36-Dv-myi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nlf-Nh-9Ql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="IVs-Vr-IuI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3279" y="1665"/>
+            <point key="canvasLocation" x="3187" y="1690"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VG0-ZH-32C">
@@ -808,10 +831,10 @@
                         <viewLayoutGuide key="safeArea" id="mxw-0E-EuK"/>
                     </view>
                     <navigationItem key="navigationItem" id="GQd-f7-tjl">
-                        <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="oR0-6N-3xC">
+                        <barButtonItem key="leftBarButtonItem" title="К списку игр" style="plain" id="oR0-6N-3xC">
                             <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="bsV-8X-OUC" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="XKq-Bb-f6s"/>
+                                <segue destination="bsV-8X-OUC" kind="unwind" unwindAction="unwindToGameMenuWindowWithSegue:" id="ONi-DF-2aT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -842,7 +865,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g9p-1v-Wcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="bsV-8X-OUC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3090" y="798"/>
+            <point key="canvasLocation" x="3396" y="892"/>
         </scene>
         <!--Результат-->
         <scene sceneID="8k3-S4-nJk">
@@ -880,10 +903,10 @@
                         <viewLayoutGuide key="safeArea" id="gcc-9I-9wA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="eha-Vi-50d">
-                        <barButtonItem key="leftBarButtonItem" title="Выйти" style="plain" id="aAo-6f-Am7">
+                        <barButtonItem key="leftBarButtonItem" title="К списку игр" style="plain" id="aAo-6f-Am7">
                             <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="eTk-BN-dEF" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="0qZ-aQ-nq6"/>
+                                <segue destination="eTk-BN-dEF" kind="unwind" unwindAction="unwindToGameMenuWindowWithSegue:" id="sTW-mZ-MEN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -895,7 +918,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lw2-se-cuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="eTk-BN-dEF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4229" y="865"/>
+            <point key="canvasLocation" x="4514" y="854"/>
         </scene>
         <!--Справка-->
         <scene sceneID="lsV-We-4OB">
