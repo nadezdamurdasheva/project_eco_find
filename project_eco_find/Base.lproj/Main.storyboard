@@ -486,7 +486,7 @@
             </objects>
             <point key="canvasLocation" x="2156.521739130435" y="797.54464285714278"/>
         </scene>
-        <!--Game And States Menu View Controller-->
+        <!--Статьи и игры-->
         <scene sceneID="RkJ-ZA-Ojw">
             <objects>
                 <viewController id="MYG-TG-1iS" customClass="GameAndStatesMenuViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
@@ -527,7 +527,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RFV-Xh-vWE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Gnu-3F-Agg">
+                    <navigationItem key="navigationItem" title="Статьи и игры" id="Gnu-3F-Agg">
                         <barButtonItem key="leftBarButtonItem" title="В меню" id="M2c-hU-YbD">
                             <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -541,7 +541,7 @@
             </objects>
             <point key="canvasLocation" x="2183" y="1588"/>
         </scene>
-        <!--Game Menu View Controller-->
+        <!--Игры-->
         <scene sceneID="1qC-Jy-izU">
             <objects>
                 <viewController id="Oqg-lW-Afa" customClass="GameMenuViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
@@ -579,7 +579,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bpi-GW-wdq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="USG-s7-zjL">
+                    <navigationItem key="navigationItem" title="Игры" id="USG-s7-zjL">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="vjE-H3-Jf7">
                             <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
