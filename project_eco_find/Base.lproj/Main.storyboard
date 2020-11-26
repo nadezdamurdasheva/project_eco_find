@@ -495,22 +495,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="Lql-nz-5sa">
-                                <rect key="frame" x="122" y="370" width="170" height="156"/>
+                                <rect key="frame" x="34.5" y="382" width="345" height="132"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfi-sm-p62">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
                                         <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="170" id="UBZ-rI-yGA"/>
+                                            <constraint firstAttribute="width" constant="345" id="iMt-Vu-zJN"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Статьи"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O2-AP-f2w">
-                                        <rect key="frame" x="0.0" y="108" width="170" height="48"/>
+                                        <rect key="frame" x="0.0" y="96" width="345" height="36"/>
                                         <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Игры"/>
                                         <connections>
@@ -550,12 +550,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-wp-HxW">
-                                <rect key="frame" x="35" y="428" width="344" height="40"/>
+                                <rect key="frame" x="34.5" y="430" width="345" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7s-ht-EwM">
-                                        <rect key="frame" x="0.0" y="0.0" width="344" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
                                         <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="345" id="Xp8-jg-4wa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Тест &quot;Насколько вы экологичны&quot;"/>
                                         <connections>
@@ -563,6 +566,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="b7s-ht-EwM" firstAttribute="centerX" secondItem="Eyr-wp-HxW" secondAttribute="centerX" id="DNS-Gd-PQq"/>
+                                    <constraint firstItem="b7s-ht-EwM" firstAttribute="centerY" secondItem="Eyr-wp-HxW" secondAttribute="centerY" id="K5k-dz-UGw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -620,7 +627,7 @@
                                 <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="Jd0-lR-PzD">
-                                <rect key="frame" x="20" y="358" width="374" height="180.5"/>
+                                <rect key="frame" x="20" y="360" width="374" height="176.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UfD-fU-8zT">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50.5"/>
@@ -649,9 +656,9 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agM-6x-yna">
-                                        <rect key="frame" x="0.0" y="140.5" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="140.5" width="374" height="36"/>
                                         <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Подтвердить"/>
                                         <connections>
@@ -661,7 +668,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ree-xF-BEN">
-                                <rect key="frame" x="20" y="264" width="374" height="368"/>
+                                <rect key="frame" x="20" y="266" width="374" height="364"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hG9-VA-9sh">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="62"/>
@@ -748,9 +755,9 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-ll-Odx">
-                                        <rect key="frame" x="0.0" y="328" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="328" width="374" height="36"/>
                                         <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Подтвердить"/>
                                         <connections>
