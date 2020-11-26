@@ -29,7 +29,7 @@ class LearningViewController: UIViewController, UIScrollViewDelegate {
     func createSlides() -> [Slide] {
 
         let slide1:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide
-        slide1.imageView.image = UIImage(named: "learn1")
+        slide1.imageView.image = UIImage(named: "learn101")
         slide1.labelDesciption.text = "Наведите камеру на маркировку для ее сканирования"
         
         let slide2:Slide = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! Slide

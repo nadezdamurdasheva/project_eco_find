@@ -149,11 +149,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Карта" id="5ON-NA-d9H">
                         <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="RkS-UC-Pev">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="6LO-QW-Asj" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="1OG-js-JaV"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Назад" style="plain" id="b7O-iu-5u8">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="6LO-QW-Asj" kind="unwind" unwindAction="unwindToDetailViewControllerWithSegue:" id="4ZK-Ro-SCP"/>
                             </connections>
@@ -245,6 +247,7 @@
                     <navigationItem key="navigationItem" title="Сканирование" id="FVR-8N-vFL">
                         <barButtonItem key="backBarButtonItem" title="В меню" id="6zu-dx-W9F"/>
                         <barButtonItem key="leftBarButtonItem" title="В меню" id="KMh-Kf-rx9">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="p8a-tK-YXS" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="o0f-J0-wC5"/>
                             </connections>
@@ -333,6 +336,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Категории упаковок" id="ijw-ZS-VRQ">
                         <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="SQ5-f1-JTm">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="5oF-hZ-qJc" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="nVP-bo-daB"/>
                             </connections>
@@ -356,7 +360,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="bZt-fm-qgD">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="bZt-fm-qgD">
                                 <rect key="frame" x="47" y="135" width="320" height="680"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uYF-zd-ToJ">
@@ -366,7 +370,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsg-zn-gjp">
-                                        <rect key="frame" x="0.0" y="273" width="320" height="273"/>
+                                        <rect key="frame" x="0.0" y="293" width="320" height="273"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="273" id="6Eu-nu-vFB"/>
                                         </constraints>
@@ -375,10 +379,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvM-BY-LF1">
-                                        <rect key="frame" x="40" y="593" width="240" height="87"/>
+                                        <rect key="frame" x="40" y="633" width="240" height="47"/>
                                         <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="87" id="ShI-mU-gJa"/>
+                                            <constraint firstAttribute="height" constant="47" id="ii7-oQ-Ow0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -391,7 +395,8 @@
                                 <constraints>
                                     <constraint firstItem="Lsg-zn-gjp" firstAttribute="leading" secondItem="bZt-fm-qgD" secondAttribute="leading" id="AT1-DF-mcs"/>
                                     <constraint firstAttribute="trailing" secondItem="Lsg-zn-gjp" secondAttribute="trailing" id="QBd-qS-XvC"/>
-                                    <constraint firstItem="Lsg-zn-gjp" firstAttribute="top" secondItem="uYF-zd-ToJ" secondAttribute="bottom" constant="47" id="VZY-Df-0Z3"/>
+                                    <constraint firstAttribute="bottom" secondItem="DvM-BY-LF1" secondAttribute="bottom" id="SSg-U6-JYU"/>
+                                    <constraint firstItem="DvM-BY-LF1" firstAttribute="top" secondItem="Lsg-zn-gjp" secondAttribute="bottom" constant="67" id="c2A-1r-TYA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -406,6 +411,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Об упаковке" id="LX4-c6-YQZ">
                         <barButtonItem key="leftBarButtonItem" title="Назад" style="plain" id="fWJ-xw-1Q3">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="6Vd-Yw-KJg" kind="unwind" unwindAction="unwindToMarksListTableViewControllerWithSegue:" id="gqG-Gh-Un0"/>
                             </connections>
@@ -419,7 +425,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYM-zE-Dfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6Vd-Yw-KJg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3490" y="-694"/>
+            <point key="canvasLocation" x="3489.8550724637685" y="-694.41964285714278"/>
         </scene>
         <!--О программе-->
         <scene sceneID="Nab-ma-Qfc">
@@ -464,6 +470,7 @@
                     <navigationItem key="navigationItem" title="О программе" id="bua-PU-o6d">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="6pV-MY-XVr"/>
                         <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="kLW-Mm-yPp">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="H4u-lQ-5y7" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="bNj-jj-z1b"/>
                             </connections>
@@ -650,6 +657,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="oLx-PC-cab"/>
                                                 </constraints>
+                                                <color key="onTintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -670,6 +678,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="M6v-Pc-aUR"/>
                                                 </constraints>
+                                                <color key="onTintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -690,6 +699,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Hih-qd-N6d"/>
                                                 </constraints>
+                                                <color key="onTintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -710,6 +720,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="LFq-FY-W06"/>
                                                 </constraints>
+                                                <color key="onTintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </switch>
                                         </subviews>
                                     </stackView>
@@ -798,6 +809,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="GQd-f7-tjl">
                         <barButtonItem key="leftBarButtonItem" title="В меню" style="plain" id="oR0-6N-3xC">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="bsV-8X-OUC" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="XKq-Bb-f6s"/>
                             </connections>
@@ -869,6 +881,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Результат" id="eha-Vi-50d">
                         <barButtonItem key="leftBarButtonItem" title="Выйти" style="plain" id="aAo-6f-Am7">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="eTk-BN-dEF" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="0qZ-aQ-nq6"/>
                             </connections>
@@ -937,6 +950,7 @@
                         <leftBarButtonItems>
                             <barButtonItem style="plain" id="uNz-Mi-udC"/>
                             <barButtonItem title="В меню" style="plain" id="7xL-Eg-5SK">
+                                <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="Esi-Yk-i9T" kind="unwind" unwindAction="unwindToMenuWindowWithSegue:" id="p1l-bs-OD1"/>
                                 </connections>

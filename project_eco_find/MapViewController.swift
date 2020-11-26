@@ -65,7 +65,7 @@ class MapViewController: UIViewController {
         changeSegment(segmentControl)
         
         rightBarItem.isEnabled = ((index != nil && index2 != nil) ? true : false)
-        rightBarItem.tintColor = ((index != nil && index2 != nil) ? UIColor.link : UIColor.clear)
+        rightBarItem.tintColor = ((index != nil && index2 != nil) ? UIColor(red: 85/255, green: 141/255, blue: 79/255, alpha: 1) : UIColor.clear)
     }
     
 
