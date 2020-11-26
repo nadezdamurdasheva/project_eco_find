@@ -487,6 +487,33 @@
             <point key="canvasLocation" x="2156.521739130435" y="797.54464285714278"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="o11-0u-1pB">
+            <objects>
+                <viewController id="BTn-zc-ciq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c2k-Di-Omf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Можно ли вторсырье отвезти прямо на завод переработчик?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ed-n0-l2p">
+                                <rect key="frame" x="65" y="108" width="286" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oxU-id-WPT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qkj-r7-yQ8">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="zdw-eT-eHC"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVd-Em-wjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104.34782608695653" y="2037.7232142857142"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="LEb-oF-BOH">
             <objects>
                 <viewController id="XKU-Er-7JE" sceneMemberID="viewController">
@@ -510,6 +537,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Как правильно разделять мусор?"/>
+                                                <connections>
+                                                    <segue destination="6TD-YI-W0J" kind="show" id="ZD5-iO-vVm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="I2Y-Hy-z1Y">
                                                 <rect key="frame" x="0.0" y="94" width="346" height="60"/>
@@ -518,8 +548,11 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
                                                     <string key="title">Сколько нужно контейнеров
-для раздельного сбора?</string>
+для раздельного сбора дома?</string>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="X1b-UW-7w6" kind="show" id="X8z-M3-63R"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q14-cW-3mp">
                                                 <rect key="frame" x="0.0" y="188" width="346" height="60"/>
@@ -530,6 +563,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Каковы продукты переработки?"/>
+                                                <connections>
+                                                    <segue destination="a2d-So-IjI" kind="show" id="Riy-5q-R3z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LQ1-pu-HTP">
                                                 <rect key="frame" x="0.0" y="282" width="346" height="60"/>
@@ -540,6 +576,9 @@
                                                     <string key="title">Можно ли вторсырьё отвезти 
 прямо на завод-переработчик?</string>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="BTn-zc-ciq" kind="show" id="o7d-F0-XBu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UGG-1A-7u4">
                                                 <rect key="frame" x="0.0" y="376" width="346" height="60"/>
@@ -550,6 +589,9 @@
                                                     <string key="title">Какие материалы 
 трудно переработать?</string>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="URY-0t-mgh" kind="show" id="9ge-a5-WsP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ToK-x1-mLh">
                                                 <rect key="frame" x="0.0" y="470" width="346" height="60"/>
@@ -560,6 +602,9 @@
                                                     <string key="title">Что делать с тем, что 
 не принимается в переработку?</string>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="ozk-K8-wwK" kind="show" id="CZY-W7-6w0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTB-fU-gKh">
                                                 <rect key="frame" x="0.0" y="564" width="346" height="60"/>
@@ -570,6 +615,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Что дает переработка?"/>
+                                                <connections>
+                                                    <segue destination="896-mM-tbb" kind="show" id="2VQ-T4-oLq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -728,6 +776,60 @@
             <point key="canvasLocation" x="3187" y="1690"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="LhH-0x-tuF">
+            <objects>
+                <viewController id="a2d-So-IjI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sqc-Uv-BTN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Каковы продукты переработки?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZr-JR-yeD">
+                                <rect key="frame" x="32" y="119" width="351" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Zeb-ag-A0e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kAQ-gR-IJ1">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="ZxL-vy-g8Y"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGb-Lf-Hag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.28985507246378" y="2809.8214285714284"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="StF-Y6-6yx">
+            <objects>
+                <viewController id="896-mM-tbb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hok-7w-thp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Что дает переработка?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oox-a0-srC">
+                                <rect key="frame" x="80" y="100" width="255" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="94C-8z-qrx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I5X-mm-2un">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="ypx-UE-rSn"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ni-YA-JY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352" y="3465"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="VG0-ZH-32C">
             <objects>
                 <viewController id="6TD-YI-W0J" sceneMemberID="viewController">
@@ -735,8 +837,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Как правильно разделять отходы?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-yB-ond">
-                                <rect key="frame" x="20" y="108" width="375" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Как правильно разделять мусор?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-yB-ond">
+                                <rect key="frame" x="25" y="112" width="365" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -746,10 +848,94 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Odj-08-Z0k"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aqz-wy-hLZ">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="IKd-86-LY2"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3O-eG-f0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2374" y="2363"/>
+            <point key="canvasLocation" x="1048" y="2738"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="drB-x4-N87">
+            <objects>
+                <viewController id="URY-0t-mgh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7UF-Ik-58S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Какие материалы трудно переработать?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUs-Va-Y3p">
+                                <rect key="frame" x="58" y="109" width="298" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xte-qI-y41"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="N5w-61-LND">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="Jxe-v6-ehG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7o-oa-xZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.9420289855075" y="3305.3571428571427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aPl-Nl-FzE">
+            <objects>
+                <viewController id="X1b-UW-7w6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4bV-td-yP2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Сколько нужно контейнеров для раздельного сбора дома?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiy-2F-ngo">
+                                <rect key="frame" x="59" y="112" width="297" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Qdb-an-sm0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WZU-pd-miJ">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="eka-80-SQA"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eHO-vQ-N1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295.6521739130435" y="2531.9196428571427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="HId-ng-CNO">
+            <objects>
+                <viewController id="ozk-K8-wwK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dab-OS-YaS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Что делать с тем, что не принимается на переработку?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFm-lW-pt2">
+                                <rect key="frame" x="70" y="109" width="274" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bxo-te-IlM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YQW-3x-9VQ">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="dUl-uA-0ux"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uN2-9B-vgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3271.0144927536235" y="2775"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="PZE-yV-0Wi">
