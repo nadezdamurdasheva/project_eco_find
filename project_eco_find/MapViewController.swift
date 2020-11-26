@@ -17,6 +17,7 @@ class MapViewController: UIViewController {
     private var artworks: [Artwork] = []
     let locationManager = CLLocationManager()
     var index: Int?
+    var index2: Int?
     
     @IBOutlet weak var rightBarItem: UIBarButtonItem!
     
@@ -63,8 +64,8 @@ class MapViewController: UIViewController {
         mapView.addAnnotations(artworks)
         changeSegment(segmentControl)
         
-        rightBarItem.isEnabled = ((index != nil) ? true : false)
-        rightBarItem.tintColor = ((index != nil) ? UIColor.link : UIColor.clear)
+        rightBarItem.isEnabled = ((index != nil && index2 != nil) ? true : false)
+        rightBarItem.tintColor = ((index != nil && index2 != nil) ? UIColor.link : UIColor.clear)
     }
     
 

@@ -146,7 +146,8 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
         rightBarItem.tintColor = UIColor.clear*/
         /*rightBarItem.isEnabled = true
         rightBarItem.tintColor = UIColor.blue*/
-        secondViewController.index = nil
+        //secondViewController.index = nil
+        secondViewController.rightBarItem.isEnabled = false
         show(secondViewController, sender: nil)
     }
     
