@@ -486,6 +486,128 @@
             </objects>
             <point key="canvasLocation" x="2156.521739130435" y="797.54464285714278"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LEb-oF-BOH">
+            <objects>
+                <viewController id="XKU-Er-7JE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ax1-zg-Ktz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywm-AO-mil">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="tdF-ow-8v4">
+                                        <rect key="frame" x="34" y="92" width="346" height="624"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4O-qk-pVl">
+                                                <rect key="frame" x="0.0" y="0.0" width="346" height="60"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="345" id="CT8-9V-ga9"/>
+                                                    <constraint firstAttribute="height" constant="60" id="aZB-g6-mPq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Как правильно разделять мусор?"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="I2Y-Hy-z1Y">
+                                                <rect key="frame" x="0.0" y="94" width="346" height="60"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <string key="title">Сколько нужно контейнеров
+для раздельного сбора?</string>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q14-cW-3mp">
+                                                <rect key="frame" x="0.0" y="188" width="346" height="60"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="Rex-Ws-0qE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Каковы продукты переработки?"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LQ1-pu-HTP">
+                                                <rect key="frame" x="0.0" y="282" width="346" height="60"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <string key="title">Можно ли вторсырьё отвезти 
+прямо на завод-переработчик?</string>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UGG-1A-7u4">
+                                                <rect key="frame" x="0.0" y="376" width="346" height="60"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <string key="title">Какие материалы 
+трудно переработать?</string>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ToK-x1-mLh">
+                                                <rect key="frame" x="0.0" y="470" width="346" height="60"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <string key="title">Что делать с тем, что 
+не принимается в переработку?</string>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTB-fU-gKh">
+                                                <rect key="frame" x="0.0" y="564" width="346" height="60"/>
+                                                <color key="backgroundColor" red="0.44705882352941173" green="0.74117647058823533" blue="0.41960784313725491" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="oKf-ZV-tdo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Что дает переработка?"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tdF-ow-8v4" secondAttribute="trailing" constant="35" id="4bt-3m-7aM"/>
+                                    <constraint firstAttribute="bottom" secondItem="tdF-ow-8v4" secondAttribute="bottom" constant="92" id="G8G-ti-gT7"/>
+                                    <constraint firstItem="tdF-ow-8v4" firstAttribute="centerX" secondItem="ywm-AO-mil" secondAttribute="centerX" id="P7h-0J-Cfq"/>
+                                    <constraint firstItem="tdF-ow-8v4" firstAttribute="leading" secondItem="GNN-QV-7Qp" secondAttribute="leading" constant="34" id="rfE-hO-zOC"/>
+                                    <constraint firstItem="tdF-ow-8v4" firstAttribute="centerY" secondItem="ywm-AO-mil" secondAttribute="centerY" id="wpW-0f-uTj"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="uMP-dV-Dtu"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="GNN-QV-7Qp"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ywm-AO-mil" secondAttribute="trailing" id="1BG-v8-m6M"/>
+                            <constraint firstAttribute="bottom" secondItem="ywm-AO-mil" secondAttribute="bottom" id="AsE-Ab-s9T"/>
+                            <constraint firstItem="ywm-AO-mil" firstAttribute="leading" secondItem="ax1-zg-Ktz" secondAttribute="leading" id="LNs-ld-IGy"/>
+                            <constraint firstItem="ywm-AO-mil" firstAttribute="top" secondItem="5vR-5Q-g6W" secondAttribute="top" id="XoQ-fk-bKT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5vR-5Q-g6W"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="49o-BJ-27K">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="tco-GL-LVp">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="7Tw-r9-51c" kind="unwind" unwindAction="unwindToGameAndStatesMenuWindowWithSegue:" id="mKG-Cr-A3O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbf-n3-u1w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="7Tw-r9-51c" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1002.8985507246377" y="1969.4196428571427"/>
+        </scene>
         <!--Статьи и игры-->
         <scene sceneID="RkJ-ZA-Ojw">
             <objects>
@@ -506,6 +628,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Статьи"/>
+                                        <connections>
+                                            <segue destination="XKU-Er-7JE" kind="show" id="syG-pD-6Ie"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O2-AP-f2w">
                                         <rect key="frame" x="0.0" y="96" width="345" height="36"/>
@@ -609,13 +734,22 @@
                     <view key="view" contentMode="scaleToFill" id="6Uh-4k-CHE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Как правильно разделять отходы?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-yB-ond">
+                                <rect key="frame" x="20" y="108" width="375" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Odj-08-Z0k"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3O-eG-f0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4307" y="1712"/>
+            <point key="canvasLocation" x="2374" y="2363"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="PZE-yV-0Wi">
