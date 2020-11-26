@@ -18,6 +18,7 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
         // Do any additional setup after loading the view.
     }*/
     
+    @IBOutlet weak var searchMapViaScan: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textView: UITextView!
     
@@ -47,7 +48,7 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
                 print("text \(topCandidate.string) has confidence \(topCandidate.confidence)")
     
                 detectedText += topCandidate.string
-                detectedText += "\n"
+                //detectedText += "\n"
                 
             
             }
@@ -55,6 +56,14 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
             DispatchQueue.main.async {
                 self.textView.text = detectedText
                 self.textView.flashScrollIndicators()
+                switch self.textView.text {
+                case "PET","PE","PE-HD","PEHD","HDPE","PVC","PE-LD","PELD","LDPE","PP","PS","O","OTHER","ABS","pet","pe","pe-hd","pehd","hdpe","pvc","pe-ld","peld","ldpe","pp","ps","o","other","abs","PAP","PCB","PPB","pap","pcb","ppb","FE","ALU","fe","alu","FOR","TEX","COT","for","tex","cot","GLS","GL","gls","gl","PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak":
+                    self.searchMapViaScan.isHidden = false
+                default:
+                    self.searchMapViaScan.isHidden = false
+                    self.textView.text = "Не удалось отсканировать маркировку. Сфотографируйте и отсканируйте маркировку повторно."
+                }
+                
 
             }
         }
@@ -110,7 +119,37 @@ class ScannerViewController: UIViewController, VNDocumentCameraViewControllerDel
         }
         return reloadedImage
     }
-   
+    
+    
+    @IBAction func searchMapFromScan(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let secondViewController = storyboard.instantiateViewController(identifier: "MapViewController") as? MapViewController else { return }
+        switch textView.text {
+        case "PET","PE","PE-HD","PEHD","HDPE","PVC","PE-LD","PELD","LDPE","PP","PS","O","OTHER","ABS","pet","pe","pe-hd","pehd","hdpe","pvc","pe-ld","peld","ldpe","pp","ps","o","other","abs":
+            secondViewController.index = 1
+        case "PAP","PCB","PPB","PBD","pap","pcb","ppb","pbd":
+            secondViewController.index = 2
+        case "FE","ALU","fe","alu":
+            secondViewController.index = 3
+        case "FOR","TEX","COT","for","tex","cot":
+            secondViewController.index = 4
+        case "GLS","GL","gls","gl":
+            secondViewController.index = 5
+        case "PapPet","Pap Pet","PAPPET","PAP PET","C/PAP","c/pap","Tetra Pak","TETRA PAK","tetra pak","TETRAPAK","tetrapak","TetraPak":
+            secondViewController.index = 6
+        default:
+            secondViewController.index = 0
+            /*textView.text = "Не удалось отсканировать маркировку. Сфотографируйте и отсканируйте маркировку повторно"
+            searchMapViaScan.isHidden = true*/
+        }
+        /*rightBarItem.isEnabled = false
+        rightBarItem.tintColor = UIColor.clear*/
+        /*rightBarItem.isEnabled = true
+        rightBarItem.tintColor = UIColor.blue*/
+        secondViewController.index = nil
+        show(secondViewController, sender: nil)
+    }
+    
 
     /*
     // MARK: - Navigation
