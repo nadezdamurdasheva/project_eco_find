@@ -160,43 +160,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0ZE-NM-FrI">
+                                <rect key="frame" x="47" y="115" width="320" height="202"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="TWG-HL-HDb"/>
+                                </constraints>
+                                <string key="text">Нажмите кнопку "сфотографировать", чтобы сделать снимок маркировки. Выделите область, на которой находится маркировка. Нажмите кнопку "Scan" для сканирования изображения. Нажмите кнопку "Показать на карте", чтобы на карте высветились точки, куда можно сдать упаковку.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afz-LZ-p5g">
-                                <rect key="frame" x="130" y="774" width="154" height="30"/>
-                                <state key="normal" title="Сделать фотографию"/>
+                                <rect key="frame" x="125" y="689" width="164" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7Gx-XF-dPg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Сфотографировать"/>
                                 <connections>
                                     <action selector="btnTakePicture:" destination="rFK-Bi-iYi" eventType="touchUpInside" id="k4D-Eb-e0t"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y1k-ms-vt8">
-                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbA-JF-Pb8">
+                                <rect key="frame" x="129.5" y="764" width="155" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="Lmr-1f-4Jq"/>
-                                    <constraint firstAttribute="width" constant="250" id="w3h-Oy-orJ"/>
+                                    <constraint firstAttribute="height" constant="34" id="L68-Yu-Wl4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Показать на карте"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y1k-ms-vt8">
+                                <rect key="frame" x="87.5" y="373" width="239" height="252"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="239" id="ixg-io-Tjy"/>
+                                    <constraint firstAttribute="height" constant="252" id="pmx-hT-Z7K"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0ZE-NM-FrI">
-                                <rect key="frame" x="107" y="137" width="200" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="BkI-M4-ebM"/>
-                                    <constraint firstAttribute="width" constant="200" id="biV-7V-2Z1"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Afz-LZ-p5g" firstAttribute="centerX" secondItem="ua2-FG-zw7" secondAttribute="centerX" id="2in-M2-0V9"/>
-                            <constraint firstItem="Ey7-JN-S1F" firstAttribute="bottom" secondItem="Afz-LZ-p5g" secondAttribute="bottom" constant="58" id="Br5-SN-1IT"/>
-                            <constraint firstItem="y1k-ms-vt8" firstAttribute="top" secondItem="0ZE-NM-FrI" secondAttribute="bottom" constant="58" id="Pm1-0m-uX1"/>
-                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="top" secondItem="Ey7-JN-S1F" secondAttribute="top" constant="49" id="YYq-bN-QOx"/>
-                            <constraint firstItem="y1k-ms-vt8" firstAttribute="centerY" secondItem="ua2-FG-zw7" secondAttribute="centerY" id="hoB-BV-neJ"/>
-                            <constraint firstItem="Afz-LZ-p5g" firstAttribute="centerX" secondItem="0ZE-NM-FrI" secondAttribute="centerX" id="jP1-3X-Uma"/>
-                            <constraint firstItem="y1k-ms-vt8" firstAttribute="centerX" secondItem="ua2-FG-zw7" secondAttribute="centerX" id="zqb-4e-bbb"/>
+                            <constraint firstItem="Afz-LZ-p5g" firstAttribute="top" secondItem="y1k-ms-vt8" secondAttribute="bottom" constant="64" id="6Hm-54-8yx"/>
+                            <constraint firstItem="Ey7-JN-S1F" firstAttribute="bottom" secondItem="hbA-JF-Pb8" secondAttribute="bottom" constant="64" id="6YH-zv-WYz"/>
+                            <constraint firstItem="hbA-JF-Pb8" firstAttribute="top" secondItem="Afz-LZ-p5g" secondAttribute="bottom" constant="41" id="GZD-J2-OO6"/>
+                            <constraint firstItem="Afz-LZ-p5g" firstAttribute="top" secondItem="y1k-ms-vt8" secondAttribute="bottom" constant="64" id="J83-56-1hd"/>
+                            <constraint firstItem="y1k-ms-vt8" firstAttribute="top" secondItem="0ZE-NM-FrI" secondAttribute="bottom" constant="56" id="MFY-ql-dl0"/>
+                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="centerX" secondItem="hbA-JF-Pb8" secondAttribute="centerX" id="PPO-bK-gzX"/>
+                            <constraint firstItem="y1k-ms-vt8" firstAttribute="top" secondItem="0ZE-NM-FrI" secondAttribute="bottom" constant="56" id="VZK-mh-jCa"/>
+                            <constraint firstItem="y1k-ms-vt8" firstAttribute="centerX" secondItem="ua2-FG-zw7" secondAttribute="centerX" id="cOC-1v-Zbz"/>
+                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="top" secondItem="Ey7-JN-S1F" secondAttribute="top" constant="27" id="f9N-JG-RlK"/>
+                            <constraint firstItem="hbA-JF-Pb8" firstAttribute="top" secondItem="Afz-LZ-p5g" secondAttribute="bottom" constant="41" id="fi5-SB-Thq"/>
+                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="centerX" secondItem="Afz-LZ-p5g" secondAttribute="centerX" id="kw6-UP-wyV"/>
+                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="leading" secondItem="Ey7-JN-S1F" secondAttribute="leading" constant="47" id="og7-kB-jRm"/>
+                            <constraint firstItem="0ZE-NM-FrI" firstAttribute="centerX" secondItem="ua2-FG-zw7" secondAttribute="centerX" id="sZy-08-72B"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ey7-JN-S1F"/>
                     </view>
@@ -433,6 +450,98 @@
                 <exit id="H4u-lQ-5y7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2156.521739130435" y="797.54464285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RkJ-ZA-Ojw">
+            <objects>
+                <viewController id="MYG-TG-1iS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uQN-Xb-gSF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="0rf-gE-23k">
+                                <rect key="frame" x="159.5" y="361.5" width="95" height="173"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfi-sm-p62">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Статьи"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3O2-AP-f2w">
+                                        <rect key="frame" x="11.5" y="125" width="72" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Игры"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0rf-gE-23k" firstAttribute="centerX" secondItem="uQN-Xb-gSF" secondAttribute="centerX" id="4v7-Fh-MIs"/>
+                            <constraint firstItem="0rf-gE-23k" firstAttribute="centerY" secondItem="uQN-Xb-gSF" secondAttribute="centerY" id="gFO-YV-Bzk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RFV-Xh-vWE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmf-Jq-tca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2374" y="1548"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1qC-Jy-izU">
+            <objects>
+                <viewController id="Oqg-lW-Afa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a3x-Vn-czD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-wp-HxW">
+                                <rect key="frame" x="137.5" y="324" width="139" height="248"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7s-ht-EwM">
+                                        <rect key="frame" x="0.0" y="0.0" width="139" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Игра-тест"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bD9-Bc-BfJ">
+                                        <rect key="frame" x="0.0" y="100" width="139" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Игра2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Iu-Nj-FlY">
+                                        <rect key="frame" x="0.0" y="200" width="139" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Игра3"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Eyr-wp-HxW" firstAttribute="centerY" secondItem="a3x-Vn-czD" secondAttribute="centerY" id="cAf-9F-ywi"/>
+                            <constraint firstItem="Eyr-wp-HxW" firstAttribute="centerX" secondItem="a3x-Vn-czD" secondAttribute="centerX" id="uCt-3g-QcX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bpi-GW-wdq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nlf-Nh-9Ql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3279" y="1665"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VG0-ZH-32C">
+            <objects>
+                <viewController id="6TD-YI-W0J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Uh-4k-CHE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Odj-08-Z0k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3O-eG-f0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4614" y="1665"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="PZE-yV-0Wi">
