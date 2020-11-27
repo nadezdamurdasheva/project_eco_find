@@ -494,19 +494,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Можно ли вторсырье отвезти прямо на завод переработчик?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ed-n0-l2p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Можно ли вторсырье отвезти прямо на завод переработчик?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ed-n0-l2p">
                                 <rect key="frame" x="65" y="108" width="286" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="Bcw-RB-CZl"/>
+                                    <constraint firstAttribute="height" constant="104" id="Z7i-py-Qx0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isq-3Y-jRU">
+                                <rect key="frame" x="32" y="236" width="350" height="384"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="384" id="caR-gQ-uDG"/>
+                                    <constraint firstAttribute="width" constant="350" id="gp5-5Y-ej6"/>
+                                </constraints>
+                                <mutableString key="text">Заводы по переработке как правило находятся за городом, плюс они принимают товарные партии вторсырья, там счёт идёт на тонны.  
+Некоторые заводы в целом не против принять материалы на переработку и устанавливают контейнеры для вторсырья для тех, кто очень захочет приехать прямо к ним или проезжает по пути. 
+Если вы проводите акцию или хотите организовать раздельный сбор во дворе, в офисе, то вам нужно обращаться к заготовителям (они часто принимают несколько видов вторсырья, накапливают оптовые объемы  в городе и отправляют на переработку).</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oxU-id-WPT" firstAttribute="trailing" secondItem="2Ed-n0-l2p" secondAttribute="trailing" constant="63" id="3dU-5v-xcT"/>
+                            <constraint firstItem="isq-3Y-jRU" firstAttribute="centerX" secondItem="c2k-Di-Omf" secondAttribute="centerX" id="B2d-UN-b6C"/>
+                            <constraint firstItem="2Ed-n0-l2p" firstAttribute="top" secondItem="oxU-id-WPT" secondAttribute="top" constant="20" id="BrQ-2O-HRm"/>
+                            <constraint firstItem="oxU-id-WPT" firstAttribute="bottom" secondItem="2Ed-n0-l2p" secondAttribute="bottom" constant="650" id="Fpd-9J-HQg"/>
+                            <constraint firstItem="2Ed-n0-l2p" firstAttribute="leading" secondItem="oxU-id-WPT" secondAttribute="leading" constant="65" id="hW3-Oy-bbr"/>
+                            <constraint firstItem="isq-3Y-jRU" firstAttribute="top" secondItem="2Ed-n0-l2p" secondAttribute="bottom" constant="24" id="hog-42-kiu"/>
+                            <constraint firstItem="2Ed-n0-l2p" firstAttribute="top" secondItem="oxU-id-WPT" secondAttribute="top" constant="20" id="v2Z-9U-OIZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oxU-id-WPT"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qkj-r7-yQ8">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="zdw-eT-eHC">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="jRC-bo-G4t" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="njQ-22-iic"/>
                             </connections>
@@ -518,7 +544,7 @@
             </objects>
             <point key="canvasLocation" x="-104.34782608695653" y="2037.7232142857142"/>
         </scene>
-        <!--States Menu View Controller-->
+        <!--Статьи-->
         <scene sceneID="LEb-oF-BOH">
             <objects>
                 <viewController id="XKU-Er-7JE" customClass="StatesMenuViewController" customModule="project_eco_find" customModuleProvider="target" sceneMemberID="viewController">
@@ -647,7 +673,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5vR-5Q-g6W"/>
                     </view>
-                    <navigationItem key="navigationItem" id="49o-BJ-27K">
+                    <navigationItem key="navigationItem" title="Статьи" id="49o-BJ-27K">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="tco-GL-LVp">
                             <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -785,27 +811,86 @@
             <objects>
                 <viewController id="a2d-So-IjI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sqc-Uv-BTN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1090"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Каковы продукты переработки?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZr-JR-yeD">
-                                <rect key="frame" x="32" y="119" width="351" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Okh-Ng-DNa">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1002"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZG-xv-Wjw">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1002"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Каковы продукты переработки?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZr-JR-yeD">
+                                                <rect key="frame" x="60" y="31" width="294" height="23.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzk-VA-B4F">
+                                                <rect key="frame" x="45" y="74.5" width="324" height="853"/>
+                                                <mutableString key="text">Заводы-переработчики превращают пластиковые изделия в гранулу из которой можно делать новые изделия. Эти гранулы отправляются на заводы-изготовители товаров, например, из ПЭТ-гранул делают новую ПЭТ-упаковку, полиэфирное волокно, упаковочную ленту, геотекстиль.
+
+Из полиэтилена или смеси полиэтилена и полипропилена делают стройматериалы: георешётку, трубы, полимерпесчаную плитку, ящики.
+
+Тетрапак разделяют на бумажное волокно, которое потом перерабатывается как прочая макулатура и агломерат из пластика и алюминия.
+
+Макулатура, в зависимости от изначального своего качества может стать как писчей бумагой, бумажными полотенцами и туалетной бумагой, так и картоном, подложкой для яиц или подставкой для кофе.
+
+Из текстиля можно сделать новое волокно, пригодное для повторного использования в изготовлении одежды, или же утеплитель и наполнитель для мебели.
+
+Электронику разбирают на составные части и получают различные металлы, пластики, стекло, которые перерабатываются отдельно.
+
+Стекло превращается в стеклобой, из него производят новое стекло, стекловату, современный стройматериал-пеностекло.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="fzk-VA-B4F" firstAttribute="centerX" secondItem="CZG-xv-Wjw" secondAttribute="centerX" id="0gJ-59-mHN"/>
+                                            <constraint firstItem="fzk-VA-B4F" firstAttribute="leading" secondItem="CZG-xv-Wjw" secondAttribute="leading" constant="45" id="3EY-7M-pUD"/>
+                                            <constraint firstItem="fzk-VA-B4F" firstAttribute="centerX" secondItem="bZr-JR-yeD" secondAttribute="centerX" id="5br-af-RiB"/>
+                                            <constraint firstItem="fzk-VA-B4F" firstAttribute="top" secondItem="bZr-JR-yeD" secondAttribute="bottom" constant="20" id="Mgf-xf-ZXf"/>
+                                            <constraint firstItem="bZr-JR-yeD" firstAttribute="centerX" secondItem="CZG-xv-Wjw" secondAttribute="centerX" id="Q8H-SM-syu"/>
+                                            <constraint firstItem="bZr-JR-yeD" firstAttribute="top" secondItem="CZG-xv-Wjw" secondAttribute="top" constant="31" id="cIM-l2-PCc"/>
+                                            <constraint firstAttribute="bottom" secondItem="fzk-VA-B4F" secondAttribute="bottom" constant="74.5" id="d4m-5j-2cN"/>
+                                            <constraint firstItem="fzk-VA-B4F" firstAttribute="centerY" secondItem="CZG-xv-Wjw" secondAttribute="centerY" id="wYm-OW-gDs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CZG-xv-Wjw" firstAttribute="leading" secondItem="uz6-jv-GaF" secondAttribute="leading" id="1wn-qf-1Ta"/>
+                                    <constraint firstItem="CZG-xv-Wjw" firstAttribute="bottom" secondItem="uz6-jv-GaF" secondAttribute="bottom" id="Afd-ty-i8t"/>
+                                    <constraint firstItem="CZG-xv-Wjw" firstAttribute="top" secondItem="Okh-Ng-DNa" secondAttribute="top" id="CUw-Rc-ouH"/>
+                                    <constraint firstAttribute="bottom" secondItem="CZG-xv-Wjw" secondAttribute="bottom" id="LOq-GQ-RhG"/>
+                                    <constraint firstItem="CZG-xv-Wjw" firstAttribute="top" secondItem="uz6-jv-GaF" secondAttribute="top" id="c45-XB-adH"/>
+                                    <constraint firstItem="CZG-xv-Wjw" firstAttribute="leading" secondItem="Okh-Ng-DNa" secondAttribute="leading" id="lcQ-1V-umY"/>
+                                    <constraint firstItem="CZG-xv-Wjw" firstAttribute="trailing" secondItem="uz6-jv-GaF" secondAttribute="trailing" id="t87-oI-5Je"/>
+                                    <constraint firstAttribute="trailing" secondItem="CZG-xv-Wjw" secondAttribute="trailing" id="zIk-ZO-GSp"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="p5u-ic-5ke"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uz6-jv-GaF"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Okh-Ng-DNa" firstAttribute="leading" secondItem="Zeb-ag-A0e" secondAttribute="leading" id="111-uh-NiG"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Okh-Ng-DNa" secondAttribute="bottom" constant="-34" id="HVn-Ez-1eh"/>
+                            <constraint firstItem="Okh-Ng-DNa" firstAttribute="centerX" secondItem="Sqc-Uv-BTN" secondAttribute="centerX" id="WW9-Vu-ig4"/>
+                            <constraint firstItem="Okh-Ng-DNa" firstAttribute="top" secondItem="Zeb-ag-A0e" secondAttribute="top" id="eW8-xC-vvf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Zeb-ag-A0e"/>
                     </view>
                     <navigationItem key="navigationItem" id="kAQ-gR-IJ1">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="ZxL-vy-g8Y">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="D4n-OB-r6b" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="Pii-FU-BwU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <size key="freeformSize" width="414" height="1090"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGb-Lf-Hag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="D4n-OB-r6b" userLabel="Exit" sceneMemberID="exit"/>
@@ -820,19 +905,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Что дает переработка?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oox-a0-srC">
-                                <rect key="frame" x="80" y="100" width="255" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что дает переработка?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oox-a0-srC">
+                                <rect key="frame" x="90" y="100" width="234" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="2a8-lh-man"/>
+                                    <constraint firstAttribute="height" constant="27" id="hWd-uU-bHp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMT-tB-oGh">
+                                <rect key="frame" x="36.5" y="145" width="341" height="469"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="469" id="VQh-sb-Upp"/>
+                                    <constraint firstAttribute="width" constant="341" id="hl4-dM-NeJ"/>
+                                </constraints>
+                                <mutableString key="text">Из вторичного пластика можно сделать почти (например, кроме пищевой тары, детских игрушек) любые изделия, которые изготавливают и из первичного – так происходит экономия исходных материалов. 
+ Исходные материалы для производства стекла (кварцевый песок, известь и сода) и само производство дорого. Стеклобой позволяет сократить их использование до 30%.  Одна тонна переработанной макулатуры уберегает от вырубки полтора десятка деревьев возрастом около 30 лет.  Переработка отходов черных и цветных металлов, или металлолома, имеет огромное экономическое и экологическое значение. Так как при учёте современного индустриального развития мира и объёмов металла, вовлечённого в сферу промышленного использования, становится ясно, что объём металла колоссален, то и объёмы постоянно поступающего в утиль металлолома также весьма велики. </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SMT-tB-oGh" firstAttribute="top" secondItem="oox-a0-srC" secondAttribute="bottom" constant="18" id="3er-l1-mQG"/>
+                            <constraint firstItem="SMT-tB-oGh" firstAttribute="centerX" secondItem="hok-7w-thp" secondAttribute="centerX" id="6Ag-c3-a6k"/>
+                            <constraint firstItem="oox-a0-srC" firstAttribute="top" secondItem="94C-8z-qrx" secondAttribute="top" constant="12" id="ckn-8A-ACq"/>
+                            <constraint firstItem="oox-a0-srC" firstAttribute="centerX" secondItem="hok-7w-thp" secondAttribute="centerX" id="dcy-cB-cE5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="94C-8z-qrx"/>
                     </view>
                     <navigationItem key="navigationItem" id="I5X-mm-2un">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="ypx-UE-rSn">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="agf-xX-XTH" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="XWq-SG-KF2"/>
                             </connections>
@@ -842,7 +949,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ni-YA-JY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="agf-xX-XTH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="352" y="3465"/>
+            <point key="canvasLocation" x="905.79710144927549" y="3479.4642857142858"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VG0-ZH-32C">
@@ -852,19 +959,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Как правильно разделять мусор?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-yB-ond">
-                                <rect key="frame" x="25" y="112" width="365" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как правильно разделять мусор?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-yB-ond">
+                                <rect key="frame" x="25" y="110" width="364" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="364" id="XxF-km-RmD"/>
+                                    <constraint firstAttribute="height" constant="29" id="gFo-mm-Gsg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5g-yj-GeE">
+                                <rect key="frame" x="38" y="182" width="338" height="251"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="338" id="keW-uF-f2o"/>
+                                    <constraint firstAttribute="height" constant="251" id="up9-2q-zw6"/>
+                                </constraints>
+                                <mutableString key="text">Все упаковки должны быть сухими и чистыми  от пищевых отходов. Складывать упаковки необходимо компактно, по возможности сжимать тару.
+ Этикетки с тары снимать не надо, кроме термоусадочной пвх-плёнки (это когда тара полностью утянута в этикетку). В редких случаях для пластика с маркировкой 05 и 06 нужно снимать этикетки.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="v5g-yj-GeE" firstAttribute="top" secondItem="Wwj-yB-ond" secondAttribute="bottom" constant="43" id="1nM-gs-4ZB"/>
+                            <constraint firstItem="Wwj-yB-ond" firstAttribute="centerX" secondItem="6Uh-4k-CHE" secondAttribute="centerX" id="2Om-2b-gfd"/>
+                            <constraint firstItem="Wwj-yB-ond" firstAttribute="top" secondItem="Odj-08-Z0k" secondAttribute="top" constant="22" id="SsN-k2-TKF"/>
+                            <constraint firstItem="v5g-yj-GeE" firstAttribute="centerX" secondItem="6Uh-4k-CHE" secondAttribute="centerX" id="Uu4-J9-nrJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Odj-08-Z0k"/>
                     </view>
                     <navigationItem key="navigationItem" id="aqz-wy-hLZ">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="IKd-86-LY2">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="xTY-xS-VXL" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="lce-jJ-hfb"/>
                             </connections>
@@ -874,7 +1003,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3O-eG-f0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="xTY-xS-VXL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="2738"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="2737.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="drB-x4-N87">
@@ -884,19 +1013,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Какие материалы трудно переработать?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUs-Va-Y3p">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какие материалы трудно переработать?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUs-Va-Y3p">
                                 <rect key="frame" x="58" y="109" width="298" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="fyg-cc-T4f"/>
+                                    <constraint firstAttribute="height" constant="77" id="l0s-cJ-DMe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcR-mG-Ury">
+                                <rect key="frame" x="36.5" y="194" width="341" height="474"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="474" id="0rf-yZ-OyT"/>
+                                    <constraint firstAttribute="width" constant="341" id="CFD-ku-1LB"/>
+                                </constraints>
+                                <mutableString key="text">Теоретичеcки переработать возможно всё. Сложнее всего переработать композитные материалы. 
+
+Чем проще и однороднее структура и чем более распространён продукт, тем проще его переработка.
+
+К сожалению, пока большинство производителей товаров разрабатывают их без учёта последующей утилизации. Для того, чтобы ситуация изменилась, необходима серьёзная перестройка сознания потребителей и производителей и пересмотр законодательной базы. Все товары должны разрабатываться с учётом последующей переработки. Вы можете влиять на это, отправляя производителям любимых товаров просьбы упаковывать их в более простую с точки зрения приёма на переработку упаковку.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SUs-Va-Y3p" firstAttribute="top" secondItem="xte-qI-y41" secondAttribute="top" constant="21" id="ITZ-o8-umJ"/>
+                            <constraint firstItem="pcR-mG-Ury" firstAttribute="top" secondItem="SUs-Va-Y3p" secondAttribute="bottom" constant="8" id="P5C-h7-mOY"/>
+                            <constraint firstItem="SUs-Va-Y3p" firstAttribute="centerX" secondItem="7UF-Ik-58S" secondAttribute="centerX" id="TXZ-46-VzE"/>
+                            <constraint firstItem="pcR-mG-Ury" firstAttribute="centerX" secondItem="7UF-Ik-58S" secondAttribute="centerX" id="VYq-aS-xf6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xte-qI-y41"/>
                     </view>
                     <navigationItem key="navigationItem" id="N5w-61-LND">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="Jxe-v6-ehG">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="8Jl-rP-CQY" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="HjU-hL-6ZO"/>
                             </connections>
@@ -916,19 +1070,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Сколько нужно контейнеров для раздельного сбора дома?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiy-2F-ngo">
-                                <rect key="frame" x="59" y="112" width="297" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сколько нужно контейнеров для раздельного сбора дома?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiy-2F-ngo">
+                                <rect key="frame" x="58.5" y="112" width="297" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="CZw-jE-mtg"/>
+                                    <constraint firstAttribute="width" constant="297" id="eO5-wB-vII"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOk-0m-nLE">
+                                <rect key="frame" x="37" y="241" width="341" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="nSw-st-jI1"/>
+                                </constraints>
+                                <mutableString key="text">Для раздельного сбора дома нужно две ёмкости: для вторсырья и обычная мусорка для того, что нельзя сдать. В любой квартире найдется место под одну (две) коробки/большие хозяйственные сумки.  Кроме того, мусор можно и нужно уменьшать в объеме: складывать картонные коробки, сжимать алюминиевые, жестяные и пластиковые банки, вставлять один стаканчик  из-под йогурта в другой.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eiy-2F-ngo" firstAttribute="top" secondItem="Qdb-an-sm0" secondAttribute="top" constant="24" id="928-Lg-6LE"/>
+                            <constraint firstItem="BOk-0m-nLE" firstAttribute="top" secondItem="eiy-2F-ngo" secondAttribute="bottom" constant="37" id="a91-c9-Z5J"/>
+                            <constraint firstItem="Qdb-an-sm0" firstAttribute="trailing" secondItem="BOk-0m-nLE" secondAttribute="trailing" constant="36" id="luV-Xy-9Ra"/>
+                            <constraint firstItem="BOk-0m-nLE" firstAttribute="leading" secondItem="Qdb-an-sm0" secondAttribute="leading" constant="37" id="wMB-Vh-x5P"/>
+                            <constraint firstItem="eiy-2F-ngo" firstAttribute="centerX" secondItem="4bV-td-yP2" secondAttribute="centerX" id="wwH-21-mgt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Qdb-an-sm0"/>
                     </view>
                     <navigationItem key="navigationItem" id="WZU-pd-miJ">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="eka-80-SQA">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="C1N-ST-eoJ" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="b5t-jm-n2p"/>
                             </connections>
@@ -948,19 +1123,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Что делать с тем, что не принимается на переработку?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFm-lW-pt2">
-                                <rect key="frame" x="70" y="109" width="274" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что делать с тем, что не принимается на переработку?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFm-lW-pt2">
+                                <rect key="frame" x="70" y="103" width="274" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="dYm-GH-cSt"/>
+                                    <constraint firstAttribute="width" constant="274" id="zHZ-qz-ZDn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9at-Gp-x6y">
+                                <rect key="frame" x="54.5" y="176" width="305" height="489"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="489" id="aF8-HI-Nj3"/>
+                                    <constraint firstAttribute="width" constant="305" id="rji-hL-0Ib"/>
+                                </constraints>
+                                <mutableString key="text">Несмотря на то, что в мире уже сейчас уже есть технологии для переработки 90% бытовых отходов (включая даже подгузники!), в нашей стране многие из них не применяются.  Дело в том, что инфраструктура для раздельного сбора не развита и у потенциальных переработчиков, если они вдруг захотят прийти на наш рынок, нет возможности получать большие партии сырья для загрузки производственных мощностей.  Что же нам делать в сложившейся ситуации? Попытаться предотвратить образование неперерабатываемых отходов в вашем домохозяйстве (находить аналогичные товары в упаковке, которая принимается на переработку). Если ненужную вам вещь еще можно использовать, то вместо того, чтобы сдать/выбросить попробуйте отдать её в одну из организаций, специализирующихся на повторном использовании вещей.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oFm-lW-pt2" firstAttribute="top" secondItem="Bxo-te-IlM" secondAttribute="top" constant="15" id="753-Li-eWU"/>
+                            <constraint firstItem="9at-Gp-x6y" firstAttribute="centerX" secondItem="dab-OS-YaS" secondAttribute="centerX" id="bJF-1L-eh1"/>
+                            <constraint firstItem="9at-Gp-x6y" firstAttribute="top" secondItem="oFm-lW-pt2" secondAttribute="bottom" constant="20" id="wPI-cc-92f"/>
+                            <constraint firstItem="oFm-lW-pt2" firstAttribute="centerX" secondItem="dab-OS-YaS" secondAttribute="centerX" id="xcW-re-ea6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bxo-te-IlM"/>
                     </view>
                     <navigationItem key="navigationItem" id="YQW-3x-9VQ">
                         <barButtonItem key="leftBarButtonItem" title="Назад" id="dUl-uA-0ux">
+                            <color key="tintColor" red="0.33333333333333331" green="0.55294117647058827" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="Tza-QL-sRp" kind="unwind" unwindAction="unwindToStatesMenuWindowWithSegue:" id="muZ-K0-1c7"/>
                             </connections>
